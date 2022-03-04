@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand"> SteveJob </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -23,11 +23,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Informatique</a>
-                        <a class="nav-link" href="#">BTP</a>
-                        <a class="nav-link" href="#">S3E</a>
-                        <a class="nav-link" href="#">CV et LM</a>
+                        <a class="nav-link active" aria-current="page" href="#"> Home </a>
+                        <a class="nav-link" href="#"> Informatique </a>
+                        <a class="nav-link" href="#"> BTP </a>
+                        <a class="nav-link" href="#"> Généraliste </a>
+                        <a class="nav-link" href="#"> S3E </a>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -39,7 +39,7 @@
         </nav>
     </header>
     <main>
-        <div>
+        <div class="w-75 m-auto">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -48,16 +48,21 @@
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./" class="d-block w-100" alt="...">
+                        <img src="./assets/images/btp.jpg" class="d-block w-100" alt="BTP">
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="./assets/images/info.jpg" class="d-block w-100" alt="INFO">
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="./assets/images/s3e.jpg" class="d-block w-100" alt="S3E">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/gene.jpg" class="d-block w-100" alt="GENE">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -72,14 +77,14 @@
                 </button>
             </div>
         </div>
-        <div class="container">
+        <div class="container text-center">
             <div class="row">
                 <article class="col-sm-6">BDD</article>
                 <article class="col-sm-6">Statistiques</article>
             </div>
         </div>
     </main>
-    <footer>Contact (insta,fb,twt,linkedin,mail)</footer>
+    <footer class="text-center">Contact (insta,fb,twt,linkedin,mail)</footer>
     <script src="./assets/vendors/jquery-3.6.0.js"></script>
     <script src="./assets/vendors/js/bootstrap.bundle.min.js"></script>
 </body>
