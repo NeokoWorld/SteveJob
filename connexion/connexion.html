@@ -13,28 +13,22 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Connexion
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Connexion</a></li>
-                    <li><a class="dropdown-item" href="./inscription.html">S'inscrire</a></li>
-                </ul>
+                <a class="navbar-brand pad" href="../connexion/connexion.html">Connexion</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="../mainpage/mainPage.html"> Home </a>
-                        <a class="nav-link" href="#"> Informatique </a>
-                        <a class="nav-link" href="#"> BTP </a>
-                        <a class="nav-link" href="#"> Généraliste </a>
-                        <a class="nav-link" href="#"> S3E </a>
+                    <div class="navbar-nav w-100 justify-content-between">
+                        <a class="nav-link active" aria-current="page" href="../mainpage/mainPage.html">Home</a>
+                        <a class="nav-link" href="#">Informatique</a>
+                        <a class="nav-link" href="#">BTP</a>
+                        <a class="nav-link" href="#">Généraliste</a>
+                        <a class="nav-link" href="#">S3E</a>
+                        <a class="nav-link" href="#">CV et Lettre de Motivation</a>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-secondary" type="submit">Search</button>
@@ -44,8 +38,6 @@
             </div>
         </nav>
     </header>
-    </br>
-    </br>
     <main>
         <div>
             <form method="post" action="">
@@ -64,10 +56,9 @@
                     <input type="submit" value="Envoyer" id="envoyer" />
                 </fieldset>
             </form>
-        </div>
+            <a href="../connexion/mdp_oub.html">Mot de passe oublié ?</a>
     </main>
-    <footer>
-    </footer>
+    <footer class="text-center">Contact (insta,fb,twt,linkedin,mail)</footer>
     <script src="../assets/vendors/jquery-3.6.0.js"></script>
     <script src="../assets/vendors/js/bootstrap.bundle.min.js"></script>
 </body>

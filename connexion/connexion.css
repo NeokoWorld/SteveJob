@@ -6,10 +6,13 @@ main{
     background-color: rgb(73, 73, 73);
     text-align: center;
 }
-.dropdown-toggle{
-    color:white;
-}
 footer{
     background-color: rgb(31, 31, 31);
     color:azure;
+}
+.pad{
+    padding-top:1px
+}
+a{
+    color:white;
 }
