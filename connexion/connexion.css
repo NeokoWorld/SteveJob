@@ -16,3 +16,7 @@ footer{
 a{
     color:white;
 }
+fieldset{
+    width : 525px;
+    margin:auto;
+}
