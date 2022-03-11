@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="eleve.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand pad" href="../connexion/connexion.html">Connexion</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav w-100 justify-content-between">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Informatique</a>
+                        <a class="nav-link" href="#">BTP</a>
+                        <a class="nav-link" href="#">Généraliste</a>
+                        <a class="nav-link" href="#">S3E</a>
+                        <a class="nav-link" href="#">CV et Lettre de Motivation</a>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container text-center">
+            <div class="row">
+                <article class="col-sm-6">Profil
+                    <div>
+                        <img src="../assets/images/profil.jpg"></img>
+                    </div>
+                </article>
+                <div class="col-sm-6">
+                    <div class="gerard1">Wish Liste</div>
+                    <div class="gerard2">Offre postulé</div>
+                </div>
+
+            </div>
+        </div>
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample">
+            +
+        </a>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style = "width: 200px;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="color :black;">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="color :black;">
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus rerum delectus omnis sunt modi reprehenderit inventore, beatae nobis aperiam deserunt harum quos laboriosam pariatur debitis vel possimus. Quasi, porro.
+                </div>
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown">
+                        Dropdown button
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center">Contact (insta,fb,twt,linkedin,mail)</footer>
+    <script src="../assets/vendors/jquery-3.6.0.js"></script>
+    <script src="../assets/vendors/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
