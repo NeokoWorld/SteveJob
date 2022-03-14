@@ -1,0 +1,18 @@
+article{
+    height:500px;
+    overflow:auto;
+    border: 2px solid white;
+}
+body{
+    padding:0;
+    color:white;
+}
+main{
+    background-color: rgb(73, 73, 73);
+}
+footer{
+    background-color: rgb(31, 31, 31);
+    color:azure;
+}
+.pad{
+    padding-top:1px}
