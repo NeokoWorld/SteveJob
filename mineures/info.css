@@ -1,5 +1,5 @@
 article{
-    height:500px;
+    height:735px;
     overflow:auto;
     border: 2px solid white;
 }
@@ -9,10 +9,12 @@ body{
 }
 main{
     background-color: rgb(73, 73, 73);
+    
 }
 footer{
     background-color: rgb(31, 31, 31);
     color:azure;
 }
 .pad{
-    padding-top:1px}
+    padding-top:1px
+}
