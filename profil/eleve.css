@@ -1,16 +1,16 @@
 article{
-    height:631px;
+    height:661px;
     overflow:auto;
     border: 2px solid white;
 }
 .gerard1{
-    height:313px;
+    height:327px;
     overflow:auto;
     border: 2px solid white;
     margin-bottom:5px 0;
 }
 .gerard2{
-    height:312px;
+    height:328px;
     overflow:auto;
     border: 2px solid white;
     margin:5px 0;
@@ -33,9 +33,12 @@ img{
     width: 60%;
     border: 2px solid white;
 }
-/*div{
-    height:631px;
-    overflow:auto;
-    border: 2px solid white;
-}*/
 
+@media screen and (max-width: 470px) {
+    .bout{
+        height:10%;
+    }
+}
+.bout{
+    height:10%;
+}
