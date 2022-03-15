@@ -1,26 +1,30 @@
 article{
-    height:661px;
+    height:631px;
     overflow:auto;
     border: 2px solid white;
 }
 .gerard1{
-    height:327px;
+    height:313px;
     overflow:auto;
     border: 2px solid white;
     margin-bottom:5px 0;
 }
 .gerard2{
-    height:328px;
+    height:312px;
     overflow:auto;
     border: 2px solid white;
     margin:5px 0;
 }
-body{
+html,body{
     padding:0;
     color:white;
+    height: 100%;
 }
 main{
     background-color: rgb(73, 73, 73);
+    height: 100%;
+    padding:0;
+    padding-top:60px;
 }
 footer{
     background-color: rgb(31, 31, 31);

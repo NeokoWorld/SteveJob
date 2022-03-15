@@ -8,13 +8,18 @@ article{
     margin:auto;
     border:2px solid white;
 }
-body{
+html,body{
     padding:0;
     color:white;
+    height: 100%;
 }
 main{
     background-color: rgb(73, 73, 73);
+    height: 100%;
+    padding:0;
+    padding-top:60px;
 }
+foo
 footer{
     background-color: rgb(31, 31, 31);
     color:azure;
