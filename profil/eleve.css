@@ -56,3 +56,11 @@ img{
     width: 100%;
     margin:auto;
 }
+a{
+    outline: none;
+    text-decoration: none;
+}
+.deco{
+    color:white;
+    background-color:darkred;
+}
