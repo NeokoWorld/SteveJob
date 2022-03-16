@@ -40,7 +40,7 @@ footer{
     padding-top:1px
 }
 img{
-    width: 60%;
+    width: 150px;
     border: 2px solid white;
 }
 
@@ -51,4 +51,8 @@ img{
 }
 .bout{
     height:10%;
+}
+.prof{
+    width: 100%;
+    margin:auto;
 }
