@@ -4,14 +4,14 @@ html,body{
     height: 100%;
 }
 main{
-    background-color: rgb(73, 73, 73);
+    background-color: #c5a7a1;
     padding:0;
     height:100%;
     padding-top:60px;
     margin:0;
 }
 footer{
-    background-color: rgb(31, 31, 31);
+    background-color: #2b241f;
     color:azure;
     margin:0;
 }
@@ -23,7 +23,7 @@ main>div{
     width: 75%;
     text-align: center;
     margin:auto;
-    background-color: rgb(82, 82, 82);
+    background-color: #967e7e;
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }

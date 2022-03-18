@@ -1,7 +1,7 @@
 article{
     height:733px;
     overflow:auto;
-    background-color: #7e8896;
+    background-color: #7e9686;
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }
@@ -11,13 +11,13 @@ html,body{
     height: 100%;
 }
 main{
-    background-color: #a1b5c5;
+    background-color: #a1c5a9;
     height: 100%;
     padding:0;
     padding-top:60px;
 }
 footer{
-    background-color: #1f212b;
+    background-color: #1f2b21;
     color:azure;
 }
 .pad{
