@@ -1,5 +1,16 @@
 <?php
-echo '</head>
+echo '<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="mainPage.css">
+</head>
 
 <body>
     <header>
@@ -13,7 +24,7 @@ echo '</head>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav w-100 justify-content-between">
-                        <a class="nav-link active" aria-current="page" href="../mainpage/mainPage.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="../mineures/info.html">Informatique</a>
                         <a class="nav-link" href="../mineures/btp.html">BTP</a>
                         <a class="nav-link" href="../mineures/gene.html">Généraliste</a>
@@ -27,5 +38,5 @@ echo '</head>
                 </div>
             </div>
         </nav>
-    </header>';
+    </header>'
 ?>
