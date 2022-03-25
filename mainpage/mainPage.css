@@ -25,4 +25,9 @@ footer{
     color:azure;
 }
 .pad{
-    padding-top:1px}
+    padding-top:1px
+}
+footer a{
+    padding: 0 5px;
+    color:blanchedalmond;
+}

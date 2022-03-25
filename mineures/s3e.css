@@ -23,3 +23,7 @@ footer{
 .pad{
     padding-top:1px
 }
+footer a{
+    padding: 0 5px;
+    color:blanchedalmond;
+}

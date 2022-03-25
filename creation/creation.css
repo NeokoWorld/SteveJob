@@ -27,3 +27,7 @@ footer{
     width: 60%;
     margin: auto;
 }
+footer a{
+    padding: 0 5px;
+    color:blanchedalmond;
+}
