@@ -49,11 +49,11 @@ echo '<main>
         </div>
         </br>
         <div class="text-center" style="width:75%;margin:auto;">
-            <section>BDD';
-require '../PHP/BDD_main.php';
+            <section>Offre de stage';
+require '../PHP/Class.php';
 
-$users = new BDD();
-foreach ($users->getBDD() as $user) {
+$users = new Offre();
+foreach ($users->getOffre() as $user) {
     echo '<pre>';
     echo $user['id_offre'] , " " ;
     echo $user['competences'] , " ";
@@ -65,7 +65,7 @@ foreach ($users->getBDD() as $user) {
     echo $user['id_fiche'] , " ";
     echo '</pre>';
 }
-$users->getBDD();
+$users->getOffre();
 
 echo '</section> 
     </div>
