@@ -2,6 +2,7 @@
 
 require 'Class.php';
 
+// ######################### Offre de stage ##########################
 $users = new Offre();
 foreach($users->getOffre() as $user)
 {   
@@ -18,6 +19,7 @@ foreach($users->getOffre() as $user)
 }
 $users->getOffre();
 
+// ######################### Entreprise ##########################
 $users = new Entreprise();
 foreach($users->getEntreprise() as $user)
 {   
@@ -33,6 +35,7 @@ foreach($users->getEntreprise() as $user)
 }
 $users->getEntreprise();
 
+// ######################### Eleve ##########################
 $users = new Eleve();
 foreach($users->getEleve() as $user)
 {   
@@ -44,4 +47,19 @@ foreach($users->getEleve() as $user)
     echo '</pre>';
 }
 $users->getEleve();
+
+// ######################### Pilote ##########################
+$users = new Pilote();
+foreach($users->getPilote() as $user)
+{   
+    echo '<pre>';
+    echo $user['id'] , " " ;
+    echo $user['pseudo'] , " ";
+    echo $user['motDePasse'] , " ";
+    echo $user['statusAdmin'] , " ";
+    echo '</pre>';
+}
+$users->getPilote();
+
+
 ?>

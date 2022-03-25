@@ -3,7 +3,7 @@ include '../Base/head.php';
 echo '<link rel="stylesheet" href="liste.css">';
 include '../Base/header.php';
 
-echo '<main>
+    echo'<main>
         <div class="container">
             <div class="row">
                 <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
@@ -11,7 +11,7 @@ echo '<main>
                     +
                 </a>
                 <div class="text-center col-11">
-                    <article class="prof">Liste des élèves';
+                    <article class="prof">Liste des pilotes';
                     require '../PHP/Class.php';
                     $users = new Eleve();
                     foreach($users->getEleve() as $user)
@@ -24,8 +24,7 @@ echo '<main>
                         echo '</pre>';
                     }
                     $users->getEleve();
-
-                    echo '</article>
+                    echo'</article>
                 </div>
             </div>
         </div>
@@ -37,7 +36,15 @@ echo '<main>
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="">Profil</a>
+                <a href="../profil/admin.html">Profil</a>
+                <br></br>
+                <a href="../listes/l-eleve.html">Liste des élèves</a>
+                <br></br>
+                <a href="../listes/l-pilote.html">Listes des pilotes</a>
+                <br></br>
+                <a href="../listes/l-entreprise.html">Listes des entreprises</a>
+                <br></br>
+                <a href="../creation/creation.html">Création</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>

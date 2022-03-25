@@ -1,5 +1,6 @@
 <?php
 
+// ######################### Offre de stage ##########################
 class Offre {
     private $_connexion; //PDO
 
@@ -22,6 +23,7 @@ class Offre {
     }
 }
 
+// ######################### Entreprise ##########################
 class Entreprise {
     private $_connexion; //PDO
 
@@ -44,6 +46,7 @@ class Entreprise {
     }
 }
 
+// ######################### Eleve ##########################
 class Eleve {
     private $_connexion; //PDO
 
@@ -59,6 +62,29 @@ class Eleve {
     }
 
     public function getEleve()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT * FROM utilisateurs');
+        return $utilisateur->fetchAll();
+    }
+}
+
+// ######################### Pilote ##########################
+class Pilote {
+    private $_connexion; //PDO
+
+    private function connexion()
+    {
+        try {
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3307;' , 'root', 'root'); 
+        } 
+        catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+        }
+    }
+
+    public function getPilote()
     {
         $this->connexion();
         $utilisateur = $this->_connexion->query('SELECT * FROM utilisateurs');
