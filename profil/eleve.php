@@ -1,45 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include '../Base/head.php';
+echo '<link rel="stylesheet" href="eleve.css">';
+include '../Base/header.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/vendors/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="pilote.css">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand pad" href="../connexion/connexion.html">Connexion</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav w-100 justify-content-between">
-                        <a class="nav-link active" aria-current="page" href="../mainpage/mainPage.html">Home</a>
-                        <a class="nav-link" href="../mineures/info.html">Informatique</a>
-                        <a class="nav-link" href="../mineures/btp.html">BTP</a>
-                        <a class="nav-link" href="../mineures/gene.html">Généraliste</a>
-                        <a class="nav-link" href="../mineures/s3e.html">S3E</a>
-                        <a class="nav-link" href="../lettrecv/lettrecv.html">CV et Lettre de Motivation</a>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-secondary" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
+    echo'<main>
         <div class="container">
             <div class="row">
                 <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
@@ -49,7 +13,7 @@
                 <div class="text-center col-11">
                     <article class="prof"> Profil
                         <div style="width: 65%; margin:auto;">
-                            <img src="../assets/images/pilote.jpg"></img>
+                            <img src="../assets/images/profil.jpg"></img>
                             <br>
                             <div class="row" style="margin-top:50px;">
                                 <div class="col-sm-1">Prénom</div>
@@ -94,20 +58,17 @@
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="pilote.html">Profil</a>
+                <a href="eleve.html">Profil</a>
                 <br></br>
-                <a href="../listes/l-eleve.html">Liste d'élèves</a>
+                <a href="wish.html">Wish-Liste</a>
+                <br></br>
+                <a href="offre.html">Offre de stage postulée</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer class="text-center">Contact (insta,fb,twt,linkedin,mail)</footer>
-    <script src="../assets/vendors/jquery-3.6.0.js"></script>
-    <script src="../assets/vendors/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+    </main>';
+include '../Base/footer.php';
+?>
