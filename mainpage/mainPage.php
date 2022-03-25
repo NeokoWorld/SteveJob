@@ -42,6 +42,7 @@ echo '<main>
         </br>
         <div class="text-center" style="width:75%;margin:auto;">
             <section>BDD</section>
+            
         </div>
     </main>';
     include '../Base/footer.php';
