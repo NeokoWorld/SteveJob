@@ -54,7 +54,7 @@ require '../PHP/Class.php';
 
 $users = new Offre();
 foreach ($users->getOffre() as $user) {
-    echo '<div class="bdd"><pre>';
+    echo '<pre><div class="bdd">';
     echo $user['id_offre'] , " " ;
     echo $user['competences'] , " ";
     echo $user['localite'] , " ";
@@ -64,7 +64,7 @@ foreach ($users->getOffre() as $user) {
     $date = new DateTime($user['date_offre']);
     echo $date->format('d-m-Y') , " ";
     echo $user['id_fiche'] , " ";
-    echo '</pre></div>';
+    echo '</div></pre>';
 }
 $users->getOffre();
 
