@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="../main/Style.css">
     <title>Login</title>
 </head>
 
-<body class="bodylogin">
+<body>
+<?php include_once '../base/NavBar.php';
+    ?>
+    <main class="bodylogin">
     <div class="logincontainer">
         <h2>Connexion</h2>
         <form action="" method="post">
             <div class="informationlogin">
                 <div class="email">
-                    <p>email :</p>
-                    <input type="email" placeholder="entrez votre email" required>
+                    <p>Email :</p>
+                    <input type="email" placeholder="Entrez votre Email" required>
                 </div>
                 <div class="password">
                     <p>Password :</p>
-                    <input type="password" placeholder="entrez votre Password" required>
+                    <input type="Mot de Passe" placeholder="Entrez votre Mot de Passe" required>
                 </div>
                 <div class="lol">
                     <input class="Boutonenvoyer" type="submit" value="Envoyer">
@@ -29,10 +32,8 @@
             </div>
         </form>
     </div>
-
-    <?php
-    include_once '../base/footer.php';
-    ?>
+</main>
+<?php include_once '../base/footer.php';?>
 
 </body>
 

@@ -10,9 +10,13 @@
 </head>
 
 <body>
-    <?php include_once './base/NavBar.php';
-    ?>
-
+    <?php include_once '../base/NavBar.php';?>
+<main>
+    <div class="main">
+            <section class="home-content">Offre de stage</section> 
+    </div>
+</main>           
+<?php include_once '../base/footer.php' ?>
 </body>
 
 </html>

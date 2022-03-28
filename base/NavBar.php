@@ -1,52 +1,32 @@
-<section class="navigation">
+<header>
+    <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <a href="#!">Logo</a>
+            <a href="../connexion/Connexion.php">Connexion</a>
         </div>
         <nav>
             <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
             <ul class="nav-list">
                 <li>
-                    <a href="#!">Home</a>
+                    <a href="../main/Main.php">Home</a>
                 </li>
                 <li>
-                    <a href="#!">About</a>
+                    <a href="../mineures/Informatique.php">Informatique</a>
                 </li>
                 <li>
-                    <a href="#!">Services</a>
-                    <ul class="navbar-dropdown">
-                        <li>
-                            <a href="#!">Sass</a>
-                        </li>
-                        <li>
-                            <a href="#!">Less</a>
-                        </li>
-                        <li>
-                            <a href="#!">Stylus</a>
-                        </li>
-                    </ul>
+                    <a href="#!">BTP</a>
                 </li>
                 <li>
-                    <a href="#!">Portfolio</a>
+                    <a href="#!">S3E</a>
                 </li>
                 <li>
-                    <a href="#!">Category</a>
-                    <ul class="navbar-dropdown">
-                        <li>
-                            <a href="#!">Sass</a>
-                        </li>
-                        <li>
-                            <a href="#!">Less</a>
-                        </li>
-                        <li>
-                            <a href="#!">Stylus</a>
-                        </li>
-                    </ul>
+                    <a href="#!">Generaliste</a>
                 </li>
                 <li>
-                    <a href="#!">Contact</a>
+                    <a href="../autre/CV.php">CV et Lettre</a>
                 </li>
             </ul>
         </nav>
     </div>
 </section>
+</header>

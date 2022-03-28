@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="../main/Style.css">
     <title>Document</title>
 </head>
 
 <body>
     <?php include_once '../base/NavBar.php'; ?>
-    <div class="container">
+    <main>
+    <div class="container main">
         <div class="leftbar">
 
         </div>
@@ -24,6 +25,8 @@
             </div>
         </div>
     </div>
+</main>
+<?php include_once '../base/footer.php'; ?>
 </body>
 
 </html>
