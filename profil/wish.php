@@ -24,11 +24,11 @@ include '../Base/header.php';
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="eleve.html">Profil</a>
+                <a href="eleve.php">Profil</a>
                 <br></br>
-                <a href="wish.html">Wish-Liste</a>
+                <a href="wish.php">Wish-Liste</a>
                 <br></br>
-                <a href="offre-postule.html">Offres de stage</a>
+                <a href="offre-postule.php">Offres de stage</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>

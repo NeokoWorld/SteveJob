@@ -58,9 +58,9 @@ include '../Base/header.php';
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="pilote.html">Profil</a>
+                <a href="pilote.php">Profil</a>
                 <br></br>
-                <a href="../listes/l-eleve.html">Liste d\'élèves</a>
+                <a href="../listes/l-eleve.php">Liste d\'élèves</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>

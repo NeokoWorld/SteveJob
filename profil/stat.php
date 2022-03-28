@@ -57,11 +57,11 @@ include '../Base/header.php';
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="entreprise.html">Profil</a>
+                <a href="entreprise.php">Profil</a>
                 <br></br>
-                <a href="stat.html">Statistiques</a>
+                <a href="stat.php">Statistiques</a>
                 <br></br>
-                <a href="offre-cree.html">Offres de stage</a>
+                <a href="offre-cree.php">Offres de stage</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>

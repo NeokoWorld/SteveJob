@@ -36,15 +36,15 @@ include '../Base/header.php';
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="../profil/admin.html">Profil</a>
+                <a href="../profil/admin.php">Profil</a>
                 <br></br>
-                <a href="../listes/l-eleve.html">Liste des élèves</a>
+                <a href="../listes/l-eleve.php">Liste des élèves</a>
                 <br></br>
-                <a href="../listes/l-pilote.html">Listes des pilotes</a>
+                <a href="../listes/l-pilote.php">Listes des pilotes</a>
                 <br></br>
-                <a href="../listes/l-entreprise.html">Listes des entreprises</a>
+                <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                 <br></br>
-                <a href="../creation/creation.html">Création</a>
+                <a href="../creation/creation.php">Création</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>
