@@ -61,9 +61,8 @@ foreach ($users->getOffre() as $user) {
     echo $user['entreprise'] , " ";
     echo $user['duree'] , " ";
     echo $user['remuneration'] , " ";
-    $date = date_create('2000-01-01');
-    echo date_format($date, 'd-m-Y');
-    //echo $user['date_offre'] , " ";
+    $date = new DateTime($user['date_offre']);
+    echo $date->format('d-m-Y') , " ";
     echo $user['id_fiche'] , " ";
     echo '</pre>';
 }

@@ -6,9 +6,9 @@ Affichage toutes offres home page
 // Offre Généraliste
 // Offre S3E
 
-Affichage Liste élève
-Affichage Liste pilote
-Affichage Liste entreprise
+Affichage Liste élève : fait mais mauvaise base
+Affichage Liste pilote : fait mais mauvaise base
+Affichage Liste entreprise : fait mais mauvaise base
 
 Barre de filtrage pour les offres de stages
 // pour les pilotes
