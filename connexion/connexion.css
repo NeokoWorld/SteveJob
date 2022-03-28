@@ -7,7 +7,7 @@ main{
     background-color: #c5a7a1;
     height: 85%;
     padding:0;
-    padding-top:120px;
+    padding-top:60px;
     text-align: center;
 }
 footer{
@@ -23,7 +23,7 @@ a{
 }
 fieldset{
     width : 525px;
-    margin:auto;
+    margin: 15px auto;
     background-color: #967e7e;
     border: 2px solid whitesmoke;
     border-radius: 20px;
