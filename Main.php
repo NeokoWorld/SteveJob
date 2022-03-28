@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php include_once('NavBar.php')
+    <?php include_once './base/NavBar.php';
     ?>
 
 </body>
