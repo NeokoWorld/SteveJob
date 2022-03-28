@@ -21,7 +21,16 @@ class Offre {
         $utilisateur = $this->_connexion->query('SELECT * FROM offre_de_stage');
         return $utilisateur->fetchAll();
     }
+
+    public function getOffrebyID($id)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage WHERE id_offre = $id");
+        return $utilisateur->fetchAll();
+    }
+
 }
+
 
 // ######################### Entreprise ##########################
 class Entreprise {
