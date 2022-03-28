@@ -10,6 +10,7 @@ html,body{
     padding:0;
     color:white;
     height: 100%;
+    font-family: 'Times New Roman', Times, serif;
 }
 main{
     background-color: #c5a7a1;
