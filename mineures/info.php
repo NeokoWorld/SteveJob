@@ -11,20 +11,9 @@ echo '<main>
         $users = new Offre();
 foreach($users->getOffre() as $user)
 {   
+    $date = new DateTime($user['date_offre']);
     $lien = "";
-    /*echo '<pre>';
-    echo $user['id_offre'] , " " ;
-    echo $user['competences'] , " ";
-    echo $user['localite'] , " ";
-    echo $user['entreprise'] , " ";
-    echo $user['duree'] , " ";
-    echo $user['remuneration'] , " ";
-    echo $user['date_offre'] , " ";
-    echo $user['id_fiche'] , " ";
-    echo '</pre>';*/
-
-    $lien =  $user['id_offre']." ".$user['competences']." ".$user['localite']." ".$user['entreprise']." ".$user['duree']." ".$user['remuneration']." ".$user['date_offre']." ".$user['id_fiche']." ";
-
+    $lien =  $user['id_offre']." ".$user['competences']." ".$user['localite']." ".$user['entreprise']." ".$user['duree']." ".$user['remuneration']." ". '€' ." ".date_format($date, 'd-m-Y')." ".$user['id_fiche']." ";
     echo "<div class=\"bdd\"><a href = './offre.php?idOffre=".$user['id_offre']."'>".$lien."</a></div>";
 }
 $users->getOffre();

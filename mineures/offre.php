@@ -2,25 +2,47 @@
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="info.css">';
 include '../Base/header.php';
+
+$id_Offre = $_GET['idOffre'];
+//echo($id_Offre);
+require '../PHP/Class.php';
+$offres = new Offre();
+$detail = $offres->getOffrebyID($id_Offre);
 echo '<main>
 <div class="container">
     <div class="row">
         <article class="col-sm-6">
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-1">Compétences</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-3" value="'.'" /></div>
+                <div class="col-sm-3">Entreprise</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['entreprise'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-1">Compétences</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-3" value="'.'" /></div>
+                <div class="col-sm-3">Localité(s)</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['localite'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-1">Compétences</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-3" value="'.'" /></div>
+                <div class="col-sm-3">Compétence(s)</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['competences'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-1">Compétences</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-3" value="'.'" /></div>
+                <div class="col-sm-3">Rémunération</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['remuneration']. " € ".'" /></div>
+            </div>
+            <div class="row bdd" style="margin-top:25px;">
+                <div class="col-sm-3">Durée</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['duree'].'" /></div>
+            </div>
+            <div class="row bdd" style="margin-top:25px;">
+                <div class="col-sm-3">Date mise en ligne</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['date_offre'].'" /></div>
+            </div>
+            <div class="row bdd" style="margin-top:25px;">
+                <div class="col-sm-3">ID_Fiche</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['id_fiche'].'" /></div>
+            </div>
+            <div class="row bdd" style="margin-top:25px;">
+                <div class="col-sm-3">ID_Offre</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['id_offre'].'" /></div>
             </div>
         </article>
         <article class="col-sm-6">
