@@ -1,40 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main/Style.css">
-    <title>Login</title>
-</head>
-
-<body>
-<?php include_once '../base/NavBar.php';
-    ?>
-    <main class="bodylogin">
-    <div class="logincontainer">
-        <h2>Connexion</h2>
-        <form action="" method="post">
-            <div class="informationlogin">
-                <div class="email">
-                    <p>Email :</p>
-                    <input type="email" placeholder="Entrez votre Email" required>
-                </div>
-                <div class="password">
-                    <p>Password :</p>
-                    <input type="Mot de Passe" placeholder="Entrez votre Mot de Passe" required>
-                </div>
-                <div class="lol">
-                    <input class="Boutonenvoyer" type="submit" value="Envoyer">
-                    <a href="./Loginoublié.php">Mot de passe Oublié</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</main>
-<?php include_once '../base/footer.php';?>
-
-</body>
-
-</html>
+<?php
+include '../Base/head.php';
+echo '<link rel="stylesheet" href="connexion.css">';
+include '../Base/header.php';
+echo '<main>
+        <div>
+            <form method="post" action="">
+                <fieldset>
+                    <legend>Connexion</legend>
+                    <div class="container">
+                        <div class="row"><label class="col-sm-6">Email</label>
+                            <input type="email" class="col-sm-6" placeholder="Entrez votre Email" id="Email" required />
+                        </div>
+                        <div class="row"><label class="col-sm-6">Mot de passe</label>
+                            <input type="password" class="col-sm-6" placeholder="Entrez votre Mot de Passe" id="mdp"
+                                minlength="8" required />
+                        </div>
+                    </div>
+                    </br>
+                    <input type="submit" value="Envoyer" id="envoyer" />
+                </fieldset>
+            </form>
+            <a href="../connexion/mdp_oub.php">Mot de passe oublié ?</a>
+        </div>
+    </main>';
+include '../Base/footer.php';

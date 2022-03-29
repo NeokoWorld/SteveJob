@@ -1,0 +1,18 @@
+Connexion
+
+Affichage toutes offres home page
+// Offre informatique
+// Offre BTP
+// Offre Généraliste
+// Offre S3E
+
+Affichage Liste élève : fait mais mauvaise base
+Affichage Liste pilote : fait mais mauvaise base
+Affichage Liste entreprise : fait mais mauvaise base
+
+Barre de filtrage pour les offres de stages
+// pour les pilotes
+// pour les élèves
+
+Faire les liens avec Session_Start, etc
+

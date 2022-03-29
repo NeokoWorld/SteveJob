@@ -1,0 +1,40 @@
+article{
+    height:733px;
+    overflow:auto;
+    background-color: #7e8896;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+}
+html,body{
+    padding:0;
+    color:white;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+main{
+    background-color: #a1b5c5;
+    height: 100%;
+    padding:0;
+    padding-top:60px;
+}
+footer{
+    background-color: #1f212b;
+    color:azure;
+}
+.pad{
+    padding-top:1px
+}
+footer a{
+    padding: 0 5px;
+    color:blanchedalmond;
+}
+.bdd{
+    background-color: #b7c2e4;
+    margin:5px 0;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    text-align: center;
+}
+a{
+    color:white;
+}

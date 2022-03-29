@@ -1,0 +1,37 @@
+html,body{
+    padding:0;
+    color:white;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+main{
+    background-color: #c5a7a1;
+    padding:0;
+    height:100%;
+    padding-top:60px;
+    margin:0;
+}
+footer{
+    background-color: #2b241f;
+    color:azure;
+    margin:0;
+}
+.pad{
+    padding-top:1px
+}
+main>div{
+    margin:0;
+    width: 75%;
+    text-align: center;
+    margin:auto;
+    background-color: #967e7e;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+}
+p{
+    margin:0;
+}
+footer a{
+    padding: 0 5px;
+    color:blanchedalmond;
+}
