@@ -29,11 +29,12 @@ footer a{
     color:blanchedalmond;
 }
 .bdd{
+    padding:17px;
+    text-align: center;
     background-color: #8b94af;
     margin:5px 0;
     border: 2px solid whitesmoke;
     border-radius: 20px;
-    text-align: center;
 }
 a{
     color:white;
