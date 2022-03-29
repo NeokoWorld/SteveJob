@@ -49,22 +49,21 @@ echo '<main>
         </div>
         </br>
         <div class="text-center" style="width:75%;margin:auto;">
-            <section>Offre de stage';
+            <section><h5><strong>Offre de stage</strong></h5>';
 require '../PHP/Class.php';
 
 $users = new Offre();
 
-if ($_GET['page']){
+if (isset($_GET['page']) && !empty($_GET['page'])){
     $page=$_GET['page']-1;
-
 }else{
  $page=0;
 }
 
 
-$limitLignesPage = isset($_SESSION['nbrLignesAffiche']) ? $_SESSION['nbrLignesAffiche'] : 5;
+//$limitLignesPage = isset($_SESSION['nbrLignesAffiche']) ? $_SESSION['nbrLignesAffiche'] : 5;
 foreach ($users->getOffre($page*10) as $user) {
-    echo '<pre><div class="bdd">';
+    echo '<div class="bdd">';
     echo $user['id_offre'] , " " ;
     echo $user['competences'] , " ";
     echo $user['localite'] , " ";
@@ -74,7 +73,7 @@ foreach ($users->getOffre($page*10) as $user) {
     $date = new DateTime($user['date_offre']);
     echo $date->format('d-m-Y') , " ";
     echo $user['id_fiche'] , " ";
-    echo '</div></pre>';
+    echo '</div>';
 }
 $users->getOffre();
 $toutesLignes=(int)$users->compterOffre();
