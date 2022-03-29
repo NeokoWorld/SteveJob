@@ -255,5 +255,52 @@ class Recherche {
         $stmt -> execute();
         return $stmt->fetchAll();
     }
+
+    public function getOffrebyComp($competence)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("SELECT * FROM offre_de_stage WHERE competences LIKE ?");
+        $query = $competence.'%';
+        $stmt -> bindValue(1, $query, PDO::PARAM_STR);
+        $stmt -> execute();
+        return $stmt->fetchAll();
+    }
+}
+
+// ######################### Wish liste ##########################
+class WishListe {
+    private $_connexion; //PDO
+
+    private function connexion()
+    {
+        try {
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
+        } 
+        catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+        }
+    }
+
+    public function getWishListe()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetchAll();
+    }
+
+    public function AddWishListe()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetchAll();
+    }
+
+    public function delWishListe()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetchAll();
+    }
 }
 ?>

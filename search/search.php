@@ -48,12 +48,25 @@ foreach ($names->getEntreprisebyName($_GET['Recherche']) as $name) {
     echo $name['Nom'], " ";
     echo $name['Secteur_activite'], " ";
     echo $name['Localite'], " ";
-    echo $name['Nb_stagiaire_cesi'], " ";
+    echo $name['Nb_stagiaire_cesi'], " stagiaires", " ";
     echo $name['evaluation_stagiaire'], "/5" , " ";
     echo $name['confiance_pilote'], "/5" , " ";
     echo '</div>';
 }
 $names->getEntreprisebyName($_GET['Recherche']);
+
+$competences = new Recherche();
+foreach ($competences->getOffrebyComp($_GET['Recherche']) as $competence) 
+{
+    $date = new DateTime($competence['date_offre']);
+    $lien = "";
+    $lien =  $competence['id_offre']." ".$competence['localite']." ".$competence['entreprise']." ".$competence['competences']." ".$competence['duree']." ". 'semaines'." ".$competence['remuneration']." ". '€' ." ".date_format($date, 'd-m-Y')." ".$competence['id_fiche']." ";
+    echo "<div class=\"offre\"><h5><strong>Offre de stage</strong></h5><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$competence['id_offre']."'>".$lien."</a></div>";
+}
+
+
+
+$competences->getOffrebyComp($_GET['Recherche']);
 
 echo '</article>
                 </div>

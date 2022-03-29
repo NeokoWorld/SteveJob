@@ -71,7 +71,7 @@ a{
 
 .eleve{
     padding:17px;
-    background-color: #a78c86;
+    background-color: #ffd000;
     border: 2px solid whitesmoke;
     border-radius: 20px;
     margin:5px;
@@ -92,4 +92,16 @@ a{
     border-radius: 20px;
     margin:5px;
     color: black;
+}
+.offre{
+    padding:17px;
+    background-color: #0a9602;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    margin:5px;
+    color: black;
+}
+.joie{
+    text-decoration: none;
+    color:black;
 }

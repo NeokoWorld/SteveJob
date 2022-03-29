@@ -16,35 +16,35 @@ echo '<main>
                 <img src="../assets/images/entreprise.png" class="rounded mx-auto d-block" style="height:20%; margin-top:10px;"></img>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Entreprise</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['entreprise'].'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['entreprise'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Localité(s)</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['localite'].'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['localite'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Compétence(s)</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['competences'].'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['competences'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Rémunération</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['remuneration']. " € ".'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['remuneration']. " € ".'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Durée du stage</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['duree']. " semaines".'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['duree']. " semaines".'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Date mise en ligne</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.date_format($date, 'd-m-Y').'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.date_format($date, 'd-m-Y').'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">ID Entreprise</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['id_fiche'].'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['id_fiche'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">ID Offre</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['id_offre'].'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.$detail['id_offre'].'" /></div>
             </div>
         </article>
         <article class="col-sm-6">
