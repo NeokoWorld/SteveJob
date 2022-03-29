@@ -70,7 +70,7 @@ foreach ($users->getOffre($page*10) as $user) {
     echo $user['localite'] , " ";
     echo $user['entreprise'] , " ";
     echo $user['duree'] , " ";
-    echo $user['remuneration'] , " ";
+    echo $user['remuneration'] , ' € ' , " ";
     $date = new DateTime($user['date_offre']);
     echo $date->format('d-m-Y') , " ";
     echo $user['id_fiche'] , " ";

@@ -7,7 +7,7 @@ class Offre {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3306;' , 'root', ''); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -32,10 +32,9 @@ class Offre {
     public function getOffrebyID($id)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage WHERE id_offre = $id");
-        return $utilisateur->fetchAll();
+        $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage WHERE id_Offre = $id");
+        return $utilisateur->fetch();
     }
-
 }
 
 
@@ -46,7 +45,7 @@ class Entreprise {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3306;' , 'root', ''); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -69,7 +68,7 @@ class Eleve {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3306;' , 'root', ''); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3307;' , 'root', 'root'); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -92,7 +91,7 @@ class Pilote {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3306;' , 'root', ''); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3307;' , 'root', 'root'); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
