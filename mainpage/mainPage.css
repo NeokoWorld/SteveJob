@@ -1,7 +1,7 @@
 section{
     height:500px;
     overflow:auto;
-    background-color: #967e7e;
+    background-color: #6d5d5d;
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }
@@ -32,7 +32,7 @@ footer a{
     color:blanchedalmond;
 }
 .bdd{
-    background-color: #e4bfb7;
+    background-color: #a78c86;
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }

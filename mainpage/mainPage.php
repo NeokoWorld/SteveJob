@@ -53,7 +53,17 @@ echo '<main>
 require '../PHP/Class.php';
 
 $users = new Offre();
-foreach ($users->getOffre() as $user) {
+
+if ($_GET['page']){
+    $page=$_GET['page']-1;
+
+}else{
+ $page=0;
+}
+
+
+$limitLignesPage = isset($_SESSION['nbrLignesAffiche']) ? $_SESSION['nbrLignesAffiche'] : 5;
+foreach ($users->getOffre($page*10) as $user) {
     echo '<pre><div class="bdd">';
     echo $user['id_offre'] , " " ;
     echo $user['competences'] , " ";
@@ -67,8 +77,30 @@ foreach ($users->getOffre() as $user) {
     echo '</div></pre>';
 }
 $users->getOffre();
+$toutesLignes=(int)$users->compterOffre();
+$totoalPages = ceil($toutesLignes/10);
+if(isset($_GET['page']) && !empty($_GET['page'])){
+    $currentPage = (int) strip_tags($_GET['page'])-1;
+}else{
+    $currentPage = 0;
+}?>
 
-echo '</section> 
+<nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item <?php if($page<=0){echo 'disabled';} ?>">
+            <a class="page-link" href="<?php if($page<0){echo '#';} else{echo "?page=".($currentPage-1);}?>">Precedent</a>
+        </li>
+        <?php for($i=1;$i <=$totoalPages; $i++): ?>
+        <li class="page-item <?php if(($page+1)==$i){echo 'active';} ?>">
+            <a class="page-link" href="?page=<?=$i;?>"><?=$i;?></a>
+        </li>
+        <?php endfor; ?>
+        <li class="page-item <?php if(($page+1)>=$totoalPages){echo 'disabled';} ?>">
+            <a class="page-link" href="<?php if($page>=$totoalPages){echo '#';} else{echo "?page=".($currentPage+2);}?>">Suivant</a>
+        </li>
+    </ul>
+</nav>
+</section> 
     </div>
-    </main>';
-include '../Base/footer.php';
+    </main>
+<?php include '../Base/footer.php';?>
