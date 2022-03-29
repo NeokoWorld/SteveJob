@@ -16,12 +16,15 @@ echo '<main>
                     $users = new Eleve();
                     foreach($users->getEleve() as $user)
                     {   
-                        echo '<pre>';
-                        echo $user['id'] , " " ;
-                        echo $user['pseudo'] , " ";
-                        echo $user['motDePasse'] , " ";
-                        echo $user['statutAdmin'] , " ";
-                        echo '</pre>';
+                        echo '<div class="bdd"> ';
+                        echo $user['id_eleve'] , " " ;
+                        echo $user['nom'] , " ";
+                        echo $user['prenom'] , " ";
+                        echo $user['centre'] , " ";
+                        echo $user['Promotion'] , " ";
+                        echo $user['email'] , " ";
+                        echo $user['id_user'] , " ";
+                        echo '</div>';
                     }
                     $users->getEleve();
 
