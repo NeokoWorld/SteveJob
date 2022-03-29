@@ -31,19 +31,19 @@ echo '<main>
                 <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['remuneration']. " € ".'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-3">Durée</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['duree'].'" /></div>
+                <div class="col-sm-3">Durée du stage</div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['duree']. " semaines".'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Date mise en ligne</div>
                 <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.date_format($date, 'd-m-Y').'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-3">ID_Fiche</div>
+                <div class="col-sm-3">ID Entreprise</div>
                 <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['id_fiche'].'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
-                <div class="col-sm-3">ID_Offre</div>
+                <div class="col-sm-3">ID Offre</div>
                 <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['id_offre'].'" /></div>
             </div>
         </article>
