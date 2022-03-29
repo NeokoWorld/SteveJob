@@ -16,15 +16,15 @@ echo '<main>
                     $users = new Entreprise();
                     foreach($users->getEntreprise() as $user)
                     {   
-                        echo '<pre>';
+                        echo '<div class="bdd">';
                         echo $user['id_fiche'] , " " ;
                         echo $user['Nom'] , " ";
                         echo $user['Secteur_activite'] , " ";
                         echo $user['Localite'] , " ";
                         echo $user['Nb_stagiaire_cesi'] , " ";
-                        echo $user['evaluation_stagiaire'] , " ";
-                        echo $user['confiance_pilote'] , " ";
-                        echo '</pre>';
+                        echo $user['evaluation_stagiaire'] , "/5" , " ";
+                        echo $user['confiance_pilote'] , "/5" , " ";
+                        echo '</div>';
                     }
                     $users->getEntreprise();
                     

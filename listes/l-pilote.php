@@ -13,17 +13,20 @@ include '../Base/header.php';
                 <div class="text-center col-11">
                     <article class="prof">Liste des pilotes';
                     require '../PHP/Class.php';
-                    $users = new Eleve();
-                    foreach($users->getEleve() as $user)
+                    $users = new Pilote();
+                    foreach($users->getPilote() as $user)
                     {   
-                        echo '<pre>';
-                        echo $user['id'] , " " ;
-                        echo $user['pseudo'] , " ";
-                        echo $user['motDePasse'] , " ";
-                        echo $user['statutAdmin'] , " ";
-                        echo '</pre>';
+                        echo '<div class="bdd">';
+                        echo $user['id_pilote'] , " " ;
+                        echo $user['nom'] , " ";
+                        echo $user['prenom'] , " ";
+                        echo $user['email'] , " ";
+                        echo $user['centre'] , " ";
+                        echo $user['promotion_assignees'] , " ";
+                        echo $user['id_user'] , " ";
+                        echo '</div>';
                     }
-                    $users->getEleve();
+                    $users->getPilote();
                     echo'</article>
                 </div>
             </div>

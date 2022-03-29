@@ -68,7 +68,7 @@ class Eleve {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3307;' , 'root', 'root'); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -79,7 +79,7 @@ class Eleve {
     public function getEleve()
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT * FROM utilisateurs');
+        $utilisateur = $this->_connexion->query('SELECT eleve.id_eleve, user.nom, user.prenom, user.centre, eleve.Promotion, user.email, eleve.id_user FROM eleve INNER JOIN user ON eleve.id_user = user.id_user; ');
         return $utilisateur->fetchAll();
     }
 }
@@ -91,7 +91,7 @@ class Pilote {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=corbeille_p7;port=3307;' , 'root', 'root'); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -102,7 +102,7 @@ class Pilote {
     public function getPilote()
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT * FROM utilisateurs');
+        $utilisateur = $this->_connexion->query('SELECT pilote.id_pilote, user.nom, user.prenom, user.email, user.centre, pilote.promotion_assignees, pilote.id_user FROM pilote INNER JOIN user ON pilote.id_user = user.id_user; ');
         return $utilisateur->fetchAll();
     }
 }

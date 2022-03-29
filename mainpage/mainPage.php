@@ -63,17 +63,10 @@ if (isset($_GET['page']) && !empty($_GET['page'])){
 
 //$limitLignesPage = isset($_SESSION['nbrLignesAffiche']) ? $_SESSION['nbrLignesAffiche'] : 5;
 foreach ($users->getOffre($page*10) as $user) {
-    echo '<div class="bdd">';
-    echo $user['id_offre'] , " " ;
-    echo $user['competences'] , " ";
-    echo $user['localite'] , " ";
-    echo $user['entreprise'] , " ";
-    echo $user['duree'] , " ";
-    echo $user['remuneration'] , ' € ' , " ";
     $date = new DateTime($user['date_offre']);
-    echo $date->format('d-m-Y') , " ";
-    echo $user['id_fiche'] , " ";
-    echo '</div>';
+    $lien = "";
+    $lien =  $user['id_offre']." ".$user['competences']." ".$user['localite']." ".$user['entreprise']." ".$user['duree']." ".$user['remuneration']." ". '€' ." ".date_format($date, 'd-m-Y')." ".$user['id_fiche']." ";
+    echo "<div class=\"bdd\"><a href = '../mineures/offre.php?idOffre=".$user['id_offre']."'>".$lien."</a></div>";
 }
 $users->getOffre();
 $toutesLignes=(int)$users->compterOffre();
