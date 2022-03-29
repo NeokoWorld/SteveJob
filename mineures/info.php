@@ -5,7 +5,7 @@ include '../Base/header.php';
 echo '<main>
 <div class="container">
     <div class="row">
-        <article class="col-sm-1"></article>
+        <article class="col-sm-1" style="text-align:center;">Filtrage</article>
         <article class="col-sm-11">';
         require '../PHP/Class.php';
         $users = new Offre();
