@@ -1,7 +1,7 @@
 article{
     height:631px;
     overflow:auto;
-    background-color: rgb(82, 82, 82);
+    background-color: #6d5d5d;
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }
@@ -28,17 +28,20 @@ html,body{
     font-family: 'Times New Roman', Times, serif;
 }
 main{
-    background-color: rgb(73, 73, 73);
-    height: 100%;
+    background-color: #c5a7a1;
     padding:0;
     padding-top:60px;
 }
 footer{
-    background-color: rgb(31, 31, 31);
+    background-color: #2b241f;
     color:azure;
 }
 .pad{
     padding-top:1px
+}
+footer a{
+    padding: 0 5px;
+    color:blanchedalmond;
 }
 img{
     width: 150px;

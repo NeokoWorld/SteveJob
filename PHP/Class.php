@@ -15,11 +15,18 @@ class Offre {
         }
     }
 
-    public function getOffre()
+    public function getOffre($offset=0)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT * FROM offre_de_stage');
+        $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage LIMIT $offset,10");
         return $utilisateur->fetchAll();
+    }
+
+    public function compterOffre(){
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM offre_de_stage');
+        $nombre =$utilisateur->fetch();
+        return $nombre['nombre'];
     }
 
     public function getOffrebyID($id)
