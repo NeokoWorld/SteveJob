@@ -53,11 +53,18 @@ class Entreprise {
         }
     }
 
-    public function getEntreprise()
+    public function getEntreprise($offset=0)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT * FROM fiche_entreprise');
+        $utilisateur = $this->_connexion->query("SELECT * FROM fiche_entreprise LIMIT $offset,10");
         return $utilisateur->fetchAll();
+    }
+
+    public function compterEntreprise(){
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM fiche_entreprise');
+        $nombre =$utilisateur->fetch();
+        return $nombre['nombre'];
     }
 }
 
@@ -76,11 +83,17 @@ class Eleve {
         }
     }
 
-    public function getEleve()
+    public function getEleve($offset=0)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT eleve.id_eleve, user.nom, user.prenom, user.centre, eleve.Promotion, user.email, eleve.id_user FROM eleve INNER JOIN user ON eleve.id_user = user.id_user; ');
+        $utilisateur = $this->_connexion->query("SELECT eleve.id_eleve, eleve.Promotion,eleve.id_user, user.nom, user.prenom, user.email, user.centre FROM eleve INNER JOIN user ON eleve.id_user = user.id_user LIMIT $offset,10");
         return $utilisateur->fetchAll();
+    }
+    public function compterEleve(){
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM eleve');
+        $nombre =$utilisateur->fetch();
+        return $nombre['nombre'];
     }
 }
 
@@ -99,11 +112,18 @@ class Pilote {
         }
     }
 
-    public function getPilote()
+    public function getPilote($offset=0)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT pilote.id_pilote, user.nom, user.prenom, user.email, user.centre, pilote.promotion_assignees, pilote.id_user FROM pilote INNER JOIN user ON pilote.id_user = user.id_user; ');
+        $utilisateur = $this->_connexion->query("SELECT pilote.id_pilote, pilote.promotion_assignees,pilote.id_user, user.nom, user.prenom, user.email, user.centre FROM pilote INNER JOIN user ON pilote.id_user = user.id_user LIMIT $offset,10");
         return $utilisateur->fetchAll();
+    }
+
+    public function compterPilote(){
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM pilote');
+        $nombre =$utilisateur->fetch();
+        return $nombre['nombre'];
     }
 }
 
