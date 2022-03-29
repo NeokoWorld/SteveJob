@@ -17,22 +17,22 @@ echo '<main>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <a href = "https://www.ladepeche.fr/2022/03/23/plan-resilience-un-premier-signal-pour-le-btp-10188453.php">
+                    <a href = "https://la1ere.francetvinfo.fr/martinique/hausse-des-materiaux-le-btp-souhaite-negocier-avec-l-etat-et-les-collectivites-pour-maintenir-l-activite-en-martinique-1266648.html">
                         <img src="../assets/images/btp.jpg" class="d-block w-100" alt="BTP">
                     </a>
                     </div>
                     <div class="carousel-item">
-                    <a href = "https://www.nextinpact.com/lebrief/68725/linformatique-en-deuil-deces-stephen-wilhite-createur-gif-et-john-roach-visionnaire-pc">
+                    <a href = "https://korii.slate.fr/tech/cristaux-temporels-futur-informatique-quantique-universite-melbourne-57-qubits-ibm-structure-reproduction-energie">
                         <img src="../assets/images/info.jpg" class="d-block w-100" alt="INFO">
                     </a>
                     </div>
                     <div class="carousel-item">
-                    <a href = "https://www.sudouest.fr/landes/gabarret/gabarret-le-retour-des-microfusees-9946872.php">
+                    <a href = "https://info-du-continent.com/chiffre-daffaires-systemes-embarques-a-microcontraleur-2022/">
                         <img src="../assets/images/s3e.jpg" class="d-block w-100" alt="S3E">
                     </a>
                     </div>
                     <div class="carousel-item">
-                    <a href = "https://www.sudouest.fr/politique/education/formation-en-charente-le-cesi-renforce-son-offre-postbac-pres-d-angouleme-9467345.php">
+                    <a href = "https://www.msn.com/fr-fr/finance/economie/lindustrie-est-morte-vive-la-nouvelle-industrie-fran-c3-a7aise/ar-AAVzACd">
                         <img src="../assets/images/gene.jpg" class="d-block w-100" alt="GENE">
                     </a>
                     </div>
