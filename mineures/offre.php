@@ -8,6 +8,7 @@ require '../PHP/Class.php';
 $offres = new Offre();
 $detail = $offres->getOffrebyID($id_Offre);
 $date = new DateTime($detail['date_offre']);
+
 echo '<main>
 <div class="container">
     <div class="row">
