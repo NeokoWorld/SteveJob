@@ -2,7 +2,7 @@ Connexion
 
 Create/Update/Delete eleve
 Create/Update/Delete pilote
-Create/Read/Update/Delete delegue
+Create//Update/Delete offre
 Create/Update/Delete entreprise
 
 Barre de filtrage pour les offres de stages
@@ -10,3 +10,5 @@ Barre de filtrage pour les offres de stages
 // pour les élèves
 
 Faire les liens avec Session_Start, etc
+
+Faire la wish liste

@@ -75,7 +75,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
                 <br></br>
                 <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                 <br></br>
-                <a href="../listes/l-entreprise.php">Création</a>
+                <a href="../creation/creation.php">Création</a>
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>
