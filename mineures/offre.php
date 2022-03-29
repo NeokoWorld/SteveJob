@@ -4,14 +4,15 @@ echo '<link rel="stylesheet" href="info.css">';
 include '../Base/header.php';
 
 $id_Offre = $_GET['idOffre'];
-//echo($id_Offre);
 require '../PHP/Class.php';
 $offres = new Offre();
 $detail = $offres->getOffrebyID($id_Offre);
+$date = new DateTime($detail['date_offre']);
 echo '<main>
 <div class="container">
     <div class="row">
         <article class="col-sm-6">
+                <img src="../assets/images/entreprise.png" class="rounded mx-auto d-block" style="height:20%; margin-top:10px;"></img>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Entreprise</div>
                 <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['entreprise'].'" /></div>
@@ -34,7 +35,7 @@ echo '<main>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Date mise en ligne</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.$detail['date_offre'].'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" value="'.date_format($date, 'd-m-Y').'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">ID_Fiche</div>
