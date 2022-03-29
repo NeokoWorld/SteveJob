@@ -19,8 +19,8 @@ echo '</head>
                         <a class="nav-link" href="../mineures/gene.php">Généraliste</a>
                         <a class="nav-link" href="../mineures/s3e.php">S3E</a>
                         <a class="nav-link" href="../lettrecv/lettrecv.php">CV et Lettre de Motivation</a>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <form class="d-flex" action="../search/search.php">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="Recherche">
                             <button class="btn btn-outline-secondary" type="submit">Search</button>
                         </form>
                     </div>

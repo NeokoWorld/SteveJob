@@ -35,6 +35,27 @@ class Offre {
         $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage WHERE id_Offre = $id");
         return $utilisateur->fetch();
     }
+
+    public function addOffre()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function delOffre()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function UpOffre()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
 }
 
 
@@ -66,6 +87,27 @@ class Entreprise {
         $nombre =$utilisateur->fetch();
         return $nombre['nombre'];
     }
+
+    public function addEntreprise()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function delEntreprise()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function UpEntreprise()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
 }
 
 // ######################### Eleve ##########################
@@ -94,6 +136,27 @@ class Eleve {
         $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM eleve');
         $nombre =$utilisateur->fetch();
         return $nombre['nombre'];
+    }
+
+    public function addEleve()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function delEleve()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function UpEleve()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
     }
 }
 
@@ -125,6 +188,72 @@ class Pilote {
         $nombre =$utilisateur->fetch();
         return $nombre['nombre'];
     }
+
+    public function addPilote()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function delPilote()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function UpPilote()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
 }
 
+// ######################### Recherche ##########################
+class Recherche {
+    private $_connexion; //PDO
+
+    private function connexion()
+    {
+        try {
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
+        } 
+        catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+        }
+    }
+
+    public function getElevebyName($name)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("SELECT * FROM user WHERE prenom LIKE ? and id_role=4");
+        $query = $name.'%';
+        $stmt -> bindValue(1, $query, PDO::PARAM_STR);
+        $stmt -> execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getPilotebyName($name)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("SELECT * FROM user WHERE prenom LIKE ? and id_role=2");
+        $query = $name.'%';
+        $stmt -> bindValue(1, $query, PDO::PARAM_STR);
+        $stmt -> execute();
+        return $stmt->fetchAll();
+    }
+    
+    public function getEntreprisebyName($name)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("SELECT * FROM fiche_entreprise WHERE nom LIKE ?");
+        $query = $name.'%';
+        $stmt -> bindValue(1, $query, PDO::PARAM_STR);
+        $stmt -> execute();
+        return $stmt->fetchAll();
+    }
+}
 ?>
