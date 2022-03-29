@@ -7,7 +7,7 @@ class Offre {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3306;' , 'root', ''); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', ''); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -45,7 +45,7 @@ class Entreprise {
     private function connexion()
     {
         try {
-            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3306;' , 'root', ''); 
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', ''); 
         } 
         catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
