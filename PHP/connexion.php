@@ -9,6 +9,7 @@ print_r($verif);
 if(count($verif)>0){
      $_SESSION['auth']=true;
      $_SESSION['user']['ID_Role']=$verif[0]['ID_Role'];
+     header("Location : ../mainpage/mainPage.php");
 }
 else{
     echo "L'identifiant ou le mot de passe est incorrecte";
