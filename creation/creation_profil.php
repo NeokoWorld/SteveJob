@@ -11,17 +11,16 @@ echo '<main>
         <form action="" method="post" class="text-center">
             <fieldset>
                 <legend>Création d\'un profil</legend>
-                <div class="row">
-                    <div class="col-4">
+                
+                    <div class="row">
+                        <div class="col-2"><input type="radio" name="compte" value="2" required /></div>
+                        <div class="col-2"><label for="Pilote">Pilote</label></div>
                     
-                        </div><div class="col-1"><input type="radio" name="compte" value="2" required /></div>
-                        <div class="col-1"><label for="Pilote">Pilote</label></div>
+                        <div class="col-2"><input type="radio" name="compte" value="4" required /></div>
+                        <div class="col-2"><label for="Eleve">Eleve</label></div>
                     
-                        <div class="col-1"><input type="radio" name="compte" value="4" required /></div>
-                        <div class="col-1"><label for="Eleve">Eleve</label></div><div class="col-4"></div>
-                    
-                        <div class="col-1"><input type="radio" name="compte" value="3" required /></div>
-                        <div class="col-1"><label for="Delegue">Delegue</label></div><div class="col-4"></div>
+                        <div class="col-2"><input type="radio" name="compte" value="3" required /></div>
+                        <div class="col-2"><label for="Delegue">Delegue</label></div>
                     
                         
                         <div class="col-6"><label for="Login">Login</label></div>
