@@ -88,22 +88,22 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                 if($_SESSION['auth']==true){
                     switch ($_SESSION['user']['ID_Role']){
                         case 1 :
-                            echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><?';
+                            echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
+                            <br></br>
+                            <a href="../listes/l-pilote.php">Listes des pilotes</a>
+                            <br></br>
+                            <a href="../listes/l-entreprise.php">Listes des entreprises</a>
+                            <br></br>
+                            <a href="../creation/creation.php">Création</a>
+                            <br></br>';
                             break;
                         case 2 :
-                             echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a><br></br><?';
+                             echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
+                             <br></br>';
                              break;
                     }
                 
                 ?>
-                <a href="../listes/l-eleve.php">Liste des élèves</a>
-                <br></br>
-                <a href="../listes/l-pilote.php">Listes des pilotes</a>
-                <br></br>
-                <a href="../listes/l-entreprise.php">Listes des entreprises</a>
-                <br></br>
-                <a href="../creation/creation.php">Création</a>
-                <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>
                 </div>
@@ -111,5 +111,5 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
         </div>
     </main>
 
-<?php echo include '../Base/footer.php';
+<?php include '../Base/footer.php';
 ?>
