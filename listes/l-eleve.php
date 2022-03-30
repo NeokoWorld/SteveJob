@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(@$_SESSION['auth']==true){
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="liste.css">';
 include '../Base/header.php';
@@ -103,13 +104,16 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                              break;
                     }
                 }
-                ?>
-                <div>
+                echo '<div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>
-    </main>
+    </main>';
 
-<?php echo include '../Base/footer.php';
+echo include '../Base/footer.php';
+}else{
+    header("Location:../connexion/connexion.php");
+    exit;
+}
 ?>
