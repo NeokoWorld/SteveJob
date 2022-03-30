@@ -13,7 +13,7 @@ if(count($verif)>0)
     exit;
 }
 else{
-    echo "L'identifiant ou le mot de passe est incorrecte";
+    echo "L'identifiant ou le mot de passe est incorrect";
 }
 
 ?>

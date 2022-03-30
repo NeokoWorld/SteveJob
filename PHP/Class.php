@@ -24,6 +24,7 @@ class LoginRepository {
         $stmt -> execute();
         return $stmt->fetchAll();
     }
+    
 }
 
 
