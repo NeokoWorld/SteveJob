@@ -7,7 +7,17 @@
             <div class="container-fluid">
                 <?php
                 if($_SESSION['auth'])==true{
-                    switch ($_SESSION['user']['ID_Role'])
+                    switch ($_SESSION['user']['ID_Role']){
+                        case 1 :
+                            echo "ADMIN";
+                            break;
+                        case 2 :
+                             echo "PILOTE";
+                             break;
+                        case 4 :
+                            echo "ELEVE";
+                            break;
+                    }
 
                 }else{
                     <a class="navbar-brand pad" href="../connexion/connexion.php">Connexion</a>
