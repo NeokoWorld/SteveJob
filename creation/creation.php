@@ -3,6 +3,7 @@ session_start();
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="creation.css">';
 include '../Base/header.php';
+
 echo '<main>
 <div class="container">
     <div class="row">
@@ -61,7 +62,7 @@ echo '<main>
                 <a href="../creation/creation.php">Création</a>
                 <br></br>
                 <div>
-                    <input type="button" action="" value="Déconnection" class="deco"/>
+                    <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>

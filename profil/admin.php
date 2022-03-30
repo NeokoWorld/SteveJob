@@ -49,7 +49,7 @@ if(@$_SESSION['auth']==true){
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body" style="color :black;">
-                    <a href="eleve.php">Profil</a>
+                    <a href="admin.php">Profil</a>
                     <br></br>
                     <a href="../listes/l-eleve.php">Liste des élèves</a>
                     <br></br>

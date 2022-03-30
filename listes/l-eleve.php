@@ -85,7 +85,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
             </div>
             <div class="offcanvas-body" style="color :black;">
             <?php
-                if($_SESSION['auth']==true){
+                if(@$_SESSION['auth']==true){
                     switch ($_SESSION['user']['ID_Role']){
                         case 1 :
                             echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>

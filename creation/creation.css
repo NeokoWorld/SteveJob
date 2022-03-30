@@ -17,7 +17,6 @@ main{
     height: 85%;
     padding:0;
     padding-top:60px;
-    text-align: center;
 }
 footer{
     background-color: #2b241f;
@@ -37,4 +36,10 @@ div>input{
 a{
     outline: none;
     text-decoration: none;
+}
+.deco{
+    color:rgb(255, 255, 255);
+    background-color:darkred;
+    border: 2px black solid;
+    padding:4px;
 }
