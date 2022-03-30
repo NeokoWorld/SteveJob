@@ -102,7 +102,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                              <br></br>';
                              break;
                     }
-                
+                }
                 ?>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>
@@ -111,5 +111,5 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
         </div>
     </main>
 
-<?php include '../Base/footer.php';
+<?php echo include '../Base/footer.php';
 ?>
