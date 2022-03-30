@@ -5,6 +5,11 @@ include '../Base/head.php';
 echo '<link rel="stylesheet" href="entreprise.css">';
 include '../Base/header.php';
 
+$id_Fiche = $_GET['idFiche'];
+require '../PHP/Class.php';
+$entreprises = new Entreprise();
+$detail = $entreprises->getEntreprisebyID($id_Fiche);
+
     echo'<main>
         <div class="container">
             <div class="row">
@@ -13,33 +18,42 @@ include '../Base/header.php';
                     +
                 </a>
                 <div class="text-center col-11">
-                    <article class="prof"> Profil
+                    <article class="prof">
                         <div style="width: 65%; margin:auto;">
                             <img src="../assets/images/entreprise.png"></img>
                             <br>
                             <div class="row" style="margin-top:50px;">
-                                <div class="col-sm-1">Nom</div>
-                                <div class="col-sm-11"><input type="Nom" class="col-sm-6" placeholder="Nom" id="nom" required /></div>
+                                <div class="col-sm-3">ID_entreprise</div>
+                                <div class="col-sm-8"><input type="id" class="col-sm-6" placeholder="id_fiche" disabled = "disabled" style="font-weight:bold;" id="id_fiche" value="'.$detail['id_fiche'].'" required /></div>
+                            </div>
+                            <div class="row" style="margin-top:50px;">
+                                <div class="col-sm-3">Nom</div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Nom" disabled = "disabled" style="font-weight:bold;" id="nom" value="'.$detail['Nom'].'" required /></div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-sm-1">Secteur(s) d\'activité</div>
-                                <div class="col-sm-11"><input type="Secteur" class="col-sm-6" placeholder="Secteur d\'activité" id="secteur" required /></div>
+                                <div class="col-sm-3">Secteur(s) d\'activité</div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Secteur d\'activité" disabled = "disabled" style="font-weight:bold;" id="secteur" value="'.$detail['Secteur_activite'].'" required /></div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-sm-1">Localité(s)</div>
-                                <div class="col-sm-11"><input type="Localité" class="col-sm-6" placeholder="Localité(s)" id="localité" required /></div>
+                                <div class="col-sm-3">Localité(s)</div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Localité(s)" disabled = "disabled" style="font-weight:bold;" id="localité" value="'.$detail['Localite'].'" required /></div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-sm-1">Nombre de stagiaire</div>
-                                <div class="col-sm-11"><input type="Nombre" class="col-sm-6" placeholder="Nombre de stagiaire" id="nbr_stagiaire" required /></div>
+                                <div class="col-sm-3">Nombre de stagiaire</div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Nombre de stagiaire" disabled = "disabled" style="font-weight:bold;" id="nbr_stagiaire" value="'.$detail['Nb_stagiaire_cesi'].'" required /></div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-sm-1">Confiance du pilote</div>
-                                <div class="col-sm-11"><input type="Confiance" class="col-sm-6" placeholder="Confiance du pilote" id="confiance" required /></div>
+                                <div class="col-sm-3">Evaluation de l\'entreprise</div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Evalution de l\'entreprise" disabled = "disabled" style="font-weight:bold;" id="evalution" value="'.$detail['evaluation_stagiaire'].'" required /></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">Confiance du pilote</div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Confiance du pilote" disabled = "disabled" style="font-weight:bold;" id="confiance" value="'.$detail['confiance_pilote'].'" required /></div>
                             </div>
                             <br>
                         </div>

@@ -63,7 +63,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])){
 foreach ($users->getOffre($page*10) as $user) {
     $date = new DateTime($user['date_offre']);
     $lien = "";
-    $lien =  $user['id_offre']." ".$user['localite']." ".$user['entreprise']." ".$user['competences']." ".$user['duree']." ". 'semaines'." ".$user['remuneration']." ". '€' ." ".date_format($date, 'd-m-Y')." ".$user['id_fiche']." ";
+    $lien =  $user['id_offre']." "."|"." ".$user['localite']." "."|"." ".$user['entreprise']." "."|"." ".$user['competences']." "."|"." ".$user['duree']." ". 'semaines'." "."|"." ".$user['remuneration']." ". '€' ." "."|"." ".date_format($date, 'd-m-Y')." "."|"." ".$user['id_fiche']." ";
     echo "<div class=\"bdd\"><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$user['id_offre']."'>".$lien."</a></div>";
 }
 $users->getOffre();

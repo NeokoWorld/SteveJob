@@ -23,17 +23,12 @@ echo '<main>
                     }
                     foreach($users->getEntreprise($page*10) as $user)
                     {   
-                        echo '<div class="bdd">';
-                        echo $user['id_fiche'] , " " ;
-                        echo $user['Nom'] , " ";
-                        echo $user['Secteur_activite'] , " ";
-                        echo $user['Localite'] , " ";
-                        echo $user['Nb_stagiaire_cesi'] , " stagiaires" , " ";
-                        echo $user['evaluation_stagiaire'] , "/5" , " ";
-                        echo $user['confiance_pilote'] , "/5" , " ";
-                        echo '</div>';
+                        $lien_entreprise = "";
+                        $lien_entreprise =  $user['id_fiche']." "."|"." ".$user['Nom']." "."|"." ".$user['Secteur_activite']." "."|"." ".$user['Localite']." "."|"." ".$user['Nb_stagiaire_cesi']." "." stagiaires "." "."|"." ".$user['evaluation_stagiaire']."/5"." |"." ".$user['confiance_pilote']."/5";
+                        echo "<div class=\"bdd\"><a class=\"joie\" href = '../profil/entreprise.php?idFiche=".$user['id_fiche']."'>".$lien_entreprise."</a></div>"; 
                     }
                     $users->getEntreprise();
+
                     $toutesLignes=(int)$users->compterEntreprise();
 $totoalPages = ceil($toutesLignes/10);
 if(isset($_GET['page']) && !empty($_GET['page'])){

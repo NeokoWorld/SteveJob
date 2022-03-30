@@ -36,7 +36,7 @@ echo '<main>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Date mise en ligne</div>
-                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.date_format($date, 'd-m-Y').'" /></div>
+                <div class="col-sm-8"><input type="text" class="col-sm-6" disabled = "disabled" style="font-weight:bold;" value="'.date_format($date,'d-m-Y').'" /></div>
             </div>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">ID Entreprise</div>

@@ -34,6 +34,7 @@ include '../Base/header.php';
                         echo '</div>';
                     }
                     $users->getPilote();
+                    
                     $toutesLignes=(int)$users->compterPilote();
 $totoalPages = ceil($toutesLignes/10);
 if(isset($_GET['page']) && !empty($_GET['page'])){
