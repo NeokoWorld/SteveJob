@@ -9,13 +9,13 @@
                 if($_SESSION['auth']==true){
                     switch ($_SESSION['user']['ID_Role']){
                         case 1 :
-                            echo "ADMIN";
+                            echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a>';
                             break;
                         case 2 :
-                             echo "PILOTE";
+                             echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a>';
                              break;
                         case 4 :
-                            echo "ELEVE";
+                            echo '<a class="navbar-brand pad" href="../profil/eleve.php">Profil</a>';
                             break;
                     }
 

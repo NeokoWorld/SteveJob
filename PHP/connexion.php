@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'Class.php';
-
 $co= new LoginRepository();
 $verif=$co->login($_POST['login'],$_POST['mdp']);
 //print_r($verif);
