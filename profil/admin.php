@@ -57,7 +57,7 @@ if(@$_SESSION['auth']==true){
                     <br></br>
                     <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                     <br></br>
-                    <a href="../creation/creation.php">Création</a>
+                    <a href="../creation/creation_pilote.php">Création</a>
                     <br></br>
                     <div>
                         <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
