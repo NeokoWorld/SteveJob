@@ -1,8 +1,8 @@
 <?php
-include_once 'Class.php'
+include 'Class.php';
 
-$co= new Login();
-$verif=$co->login();
+$co= new LoginRepository();
+$verif=$co->login(' ', ' ');
 print_r($verif);
 
 // if(){

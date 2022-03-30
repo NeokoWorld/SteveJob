@@ -1,7 +1,7 @@
 <?php
 
 // #########################  Connexion ##########################
-class Login {
+class LoginRepository {
     private $_connexion; //PDO
 
     private function connexion()
