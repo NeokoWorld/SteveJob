@@ -3,7 +3,7 @@ include '../Base/head.php';
 echo '<link rel="stylesheet" href="lettrecv.css">';
 include '../Base/header.php';
 echo '<main>
-<div>
+<article>
     <h1>Conseils pour rediger un CV et une lettre de motivation</h1>
     <h3>Conseil 1</h3>
     <p>Blablablabla</p>
@@ -25,7 +25,7 @@ echo '<main>
     <p>Blablablabla</p>
     <h3>Conseil 10 </h3>
     <p>Blablablabla</p>
-</div>
+</article>
 </main>';
     include '../Base/footer.php';
     ?>

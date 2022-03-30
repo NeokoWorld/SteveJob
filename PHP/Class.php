@@ -228,16 +228,17 @@ class Pilote {
     {
         $this->connexion();
         $stmt = $this->_connexion->prepare("INSERT INTO projet.authentification (login, mdp) VALUES ( ?, ? ); INSERT INTO projet.user (nom, prenom, email, centre, ID_Role, id_auth) VALUES (?, ?, ?, ?, ?, ?); INSERT INTO projet.pilote (id_pilote, promotion_assignees, id_user) VALUES ('', ?, ?);");
-        $stmt -> bindValue(1, PDO::PARAM_STR); //login
-        $stmt -> bindValue(2,  PDO::PARAM_STR); //mdp
-        $stmt -> bindValue(3,  PDO::PARAM_STR); //nom
-        $stmt -> bindValue(4,  PDO::PARAM_STR); //prenom
-        $stmt -> bindValue(5,  PDO::PARAM_STR); //email
-        $stmt -> bindValue(6,  PDO::PARAM_STR); //centre
-        $stmt -> bindValue(7,  PDO::PARAM_INT); //ID_Role
-        $stmt -> bindValue(8,  PDO::PARAM_INT); //id_auth
-        $stmt -> bindValue(9, PDO::PARAM_STR); //promotion_assignees
-        $stmt -> bindValue(10, PDO::PARAM_INT); //id_user
+        $query = .'%';
+        $stmt -> bindValue(1, $query, PDO::PARAM_STR); //login
+        $stmt -> bindValue(2, $query, PDO::PARAM_STR); //mdp
+        $stmt -> bindValue(3, $query, PDO::PARAM_STR); //nom
+        $stmt -> bindValue(4, $query, PDO::PARAM_STR); //prenom
+        $stmt -> bindValue(5, $query, PDO::PARAM_STR); //email
+        $stmt -> bindValue(6, $query, PDO::PARAM_STR); //centre
+        $stmt -> bindValue(7, $query, PDO::PARAM_INT); //ID_Role
+        $stmt -> bindValue(8, $query, PDO::PARAM_INT); //id_auth
+        $stmt -> bindValue(9, $query, PDO::PARAM_STR); //promotion_assignees
+        $stmt -> bindValue(10, $query, PDO::PARAM_INT); //id_user
         $stmt -> execute();
         return $stmt->fetch();
     }

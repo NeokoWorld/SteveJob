@@ -6,7 +6,6 @@ html,body{
 }
 main{
     background-color: #c5a7a1;
-    height: 85%;
     padding:0;
     padding-top:60px;
     text-align: center;
@@ -14,19 +13,9 @@ main{
 footer{
     background-color: #2b241f;
     color:azure;
-    height:15%
 }
 .pad{
     padding-top:1px
-}
-main>div{
-    margin:0;
-    width: 75%;
-    text-align: center;
-    margin:auto;
-    background-color: #6d5d5d;
-    border: 2px solid whitesmoke;
-    border-radius: 20px;
 }
 p{
     margin:0;
@@ -34,4 +23,14 @@ p{
 footer a{
     padding: 0 5px;
     color:blanchedalmond;
+}
+article{
+    margin:0;
+    width: 75%;
+    text-align: center;
+    margin:auto;
+    background-color: #6d5d5d;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    overflow:auto;
 }
