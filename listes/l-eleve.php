@@ -72,7 +72,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
     </ul>
 </nav>
 
-<?php echo '</article>
+</article>
                 </div>
             </div>
         </div>
@@ -84,8 +84,18 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="../profil/admin.php">Profil</a>
-                <br></br>
+            <?php
+                if($_SESSION['auth']==true){
+                    switch ($_SESSION['user']['ID_Role']){
+                        case 1 :
+                            echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><?';
+                            break;
+                        case 2 :
+                             echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a><br></br><?';
+                             break;
+                    }
+                
+                ?>
                 <a href="../listes/l-eleve.php">Liste des élèves</a>
                 <br></br>
                 <a href="../listes/l-pilote.php">Listes des pilotes</a>
@@ -99,6 +109,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                 </div>
             </div>
         </div>
-    </main>';
-include '../Base/footer.php';
+    </main>
+
+<?php echo include '../Base/footer.php';
 ?>
