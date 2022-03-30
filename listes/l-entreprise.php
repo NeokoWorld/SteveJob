@@ -28,7 +28,7 @@ echo '<main>
                         echo $user['Nom'] , " ";
                         echo $user['Secteur_activite'] , " ";
                         echo $user['Localite'] , " ";
-                        echo $user['Nb_stagiaire_cesi'] , " ";
+                        echo $user['Nb_stagiaire_cesi'] , " stagiaires" , " ";
                         echo $user['evaluation_stagiaire'] , "/5" , " ";
                         echo $user['confiance_pilote'] , "/5" , " ";
                         echo '</div>';

@@ -1,7 +1,7 @@
 Create/Update/Delete eleve
 Create/Update/Delete pilote
 Create//Update/Delete offre
-Create/Update/Delete entreprise
+Update/Delete entreprise
 
 Barre de filtrage pour les offres de stages
 // pour les pilotes

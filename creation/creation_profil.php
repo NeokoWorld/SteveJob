@@ -45,7 +45,7 @@ echo '<main>
                         <div class="col-6"><label for="Promotion">Promotion</label></div>
                         <div class="col-6"><input type="text" name="Promotion" placeholder="Saississez votre promotion" required/></div>
                     
-                        <div class="col-3"></div><div class="col-3"><input type="submit" value="Envoyer" id="envoyer" /></div>
+                        <div class="col-3"></div><div class="col-3"><input type="submit" value="Envoyer" id="envoyer" /+></div>
                         <div class="col-3"><input type="reset" value="Annuler" /></div><div class="col-3">
                     </div>
                 </div>

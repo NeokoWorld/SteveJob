@@ -8,28 +8,28 @@ include '../Base/header.php';
 echo '<main>
 <div class="container">
     <div class="row">
-        <form action="" method="post" class="text-center">
+        <form action="../crea_entreprise.php" method="post" class="text-center">
             <fieldset>
                 <legend>Création d\'une entreprise</legend>
                 <div class="row">
                     
                     <div class="col-6"><label for="Nom">Nom</label></div>
-                    <div class="col-6"><input type="text" name="Nom" placeholder="Saisissez votre nom" required/></div>
+                    <div class="col-6"><input type="text" name="nom" placeholder="Saisissez votre nom" required/></div>
                     
                     <div class="col-6"><label for="Secteur">Secteur d\'Activité</label></div>
-                    <div class="col-6"><input type="text" name="Prenom" placeholder="Saisissez le secteur d\'activité" required/></div>
+                    <div class="col-6"><input type="text" name="prenom" placeholder="Saisissez le secteur d\'activité" required/></div>
                     
                     <div class="col-6"><label for="Localite">Localité</label></div>
                     <div class="col-6"><input type="text" name="localite" placeholder="Saisissez la localité" required/></div>
                     
                     <div class="col-6"><label for="NbStag">Nombre de Stagiaire</label></div>
-                    <div class="col-6"><input type="text" name="NbStag" placeholder="Saisissez le nombre de Stagiaire" required/></div>
+                    <div class="col-6"><input type="text" name="nbStag" placeholder="Saisissez le nombre de Stagiaire" required/></div>
                     
                     <div class="col-6"><label for="ValStag">Evaluation Stagiaire</label></div>
-                    <div class="col-6"><input type="number" name="ValStag" placeholder="Saisissez l\'evaluation par le stagiaire" required/></div>
+                    <div class="col-6"><input type="number" name="valStag" placeholder="Saisissez l\'evaluation par le stagiaire" required/></div>
                     
                     <div class="col-6"><label for="ConfPi">Confiance Pilote</label></div>
-                    <div class="col-6"><input type="number" name="ConfPi" placeholder="Saisissez la confiance du pilote" required/></div>
+                    <div class="col-6"><input type="number" name="confPi" placeholder="Saisissez la confiance du pilote" required/></div>
                     
                     <div class="col-3"></div><div class="col-3"><input type="submit" value="Envoyer" id="envoyer" /></div>
                     <div class="col-3"><input type="reset" value="Annuler" /></div><div class="col-3">
