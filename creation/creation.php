@@ -13,14 +13,22 @@ echo '<main>
                     <div class="col-1"><label for="Pilote">Pilote</label></div>
                     <div class="col-1"><input type="radio" name="compte" value="Eleve" required /></div>
                     <div class="col-1"><label for="Eleve">Eleve</label></div><div class="col-4"></div>
+                    
                     <div class="col-6"><label for="Nom">Nom</label></div>
                     <div class="col-6"><input type="text" name="Nom" placeholder="Saisissez votre nom" required/></div>
+                    
                     <div class="col-6"><label for="Prenom">Prenom</label></div>
                     <div class="col-6"><input type="text" name="Prenom" placeholder="Saisissez votre prénom" required/></div>
+                    
+                    <div class="col-6"><label for="Email">Email</label></div>
+                    <div class="col-6"><input type="email" name="Email" placeholder="Saisissez votre email" required/></div>
+                    
                     <div class="col-6"><label for="Centre">Centre</label></div>
-                    <div class="col-6"><input type="text" name="Centre" placeholder="Saisissez votre centre de formation" required/></div>
+                    <div class="col-6"><input type="text" name="Promotion" placeholder="Saisissez votre centre de formation" required/></div>
+                    
                     <div class="col-6"><label for="Promotion">Promotion</label></div>
                     <div class="col-6"><input type="text" name="Promotion" placeholder="Indiquez votre promotion" required/></div>
+                    
                     <div class="col-3"></div><div class="col-3"><input type="submit" value="Envoyer" id="envoyer" /></div>
                     <div class="col-3"><input type="reset" value="Annuler" /></div><div class="col-3">
                     </div>
@@ -41,7 +49,7 @@ echo '<main>
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-                <a href="eleve.php">Profil</a>
+                <a href="../profil/admin.php">Profil</a>
                 <br></br>
                 <a href="../listes/l-eleve.php">Liste des élèves</a>
                 <br></br>

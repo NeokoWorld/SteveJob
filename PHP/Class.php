@@ -1,5 +1,32 @@
 <?php
 
+// #########################  Connexion ##########################
+class Login {
+    private $_connexion; //PDO
+
+    private function connexion()
+    {
+        try {
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
+        } 
+        catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+        }
+    }
+
+    public function login($identifiant, $mdp)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("SELECT * FROM authentification WHERE login = ? AND mdp = ?");
+        $stmt -> bindValue(1, $identifiant, PDO::PARAM_STR);
+        $stmt -> bindValue(2, $mdp, PDO::PARAM_STR);
+        $stmt -> execute();
+        return $stmt->fetchAll();
+    }
+}
+
+
 // ######################### Offre de stage ##########################
 class Offre {
     private $_connexion; //PDO
