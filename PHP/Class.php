@@ -18,7 +18,7 @@ class LoginRepository {
     public function login($identifiant, $mdp)
     {
         $this->connexion();
-        $stmt = $this->_connexion->prepare("SELECT * FROM authentification WHERE login = ? AND mdp = ?");
+        $stmt = $this->_connexion->prepare("SELECT * FROM authentification INNER JOIN user ON authentification.id_auth = user.id_auth INNER JOIN role ON role.ID_Role = user.ID_Role WHERE login= ? and mdp= ?");
         $stmt -> bindValue(1, $identifiant, PDO::PARAM_STR);
         $stmt -> bindValue(2, $mdp, PDO::PARAM_STR);
         $stmt -> execute();
