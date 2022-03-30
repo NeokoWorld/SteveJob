@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="admin.css">';
 include '../Base/header.php';
