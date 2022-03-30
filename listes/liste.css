@@ -65,10 +65,11 @@ a{
     text-decoration: none;
 }
 .deco{
-    color:white;
+    color:rgb(255, 255, 255);
     background-color:darkred;
+    border: 2px black solid;
+    padding:4px;
 }
-
 .bdd{
     padding:10px;
     background-color: #a78c86;

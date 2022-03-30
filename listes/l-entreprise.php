@@ -79,7 +79,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
                 <a href="../creation/creation.php">Création</a>
                 <br></br>
                 <div>
-                    <input type="button" action="" value="Déconnection" class="deco"/>
+                    <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>
