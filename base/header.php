@@ -5,8 +5,13 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <?php?>
-                <a class="navbar-brand pad" href="../connexion/connexion.php">Connexion</a>
+                <?php
+                if($_SESSION['auth'])==true{
+                    switch ($_SESSION['user']['ID_Role'])
+
+                }else{
+                    <a class="navbar-brand pad" href="../connexion/connexion.php">Connexion</a>
+                }?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
