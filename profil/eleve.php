@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(@$_SESSION['auth']==true){
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="eleve.css">';
 include '../Base/header.php';
@@ -72,4 +73,8 @@ include '../Base/header.php';
         </div>
     </main>';
 include '../Base/footer.php';
+}else{
+    header("Location:../connexion/connexion.php");
+    exit;
+}
 ?>
