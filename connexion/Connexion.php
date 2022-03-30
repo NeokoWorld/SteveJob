@@ -5,7 +5,7 @@ include '../Base/header.php';?>
 
 <main>
         <div>
-            <form method="post" action="">
+            <form method="post" action="../PHP/connexion.php">
                 <fieldset>
                     <legend>Connexion</legend>
                     <div class="container">
