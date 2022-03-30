@@ -62,9 +62,12 @@ a{
     text-decoration: none;
 }
 .deco{
-    color:white;
+    color:rgb(255, 255, 255);
     background-color:darkred;
+    border: 2px black solid;
+    padding:4px;
 }
+
 footer a{
     padding: 0 5px;
     color:blanchedalmond;

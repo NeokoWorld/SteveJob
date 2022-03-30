@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <?php
-                if($_SESSION['auth']==true){
+                if(@$_SESSION['auth']==true){
                     switch ($_SESSION['user']['ID_Role']){
                         case 1 :
                             echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a>';

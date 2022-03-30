@@ -58,8 +58,7 @@ include '../Base/header.php';
                 <a href="../creation/creation.php">Création</a>
                 <br></br>
                 <div>
-                    <input type="button" action="" value="Déconnection" class="deco"/>
-                    <a href="../deco/deconnexion.php">Deconnexion</a>
+                    <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>

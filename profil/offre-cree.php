@@ -32,7 +32,7 @@ include '../Base/header.php';
                 <a href="offre-cree.php">Offres de stage</a>
                 <br></br>
                 <div>
-                    <input type="button" action="" value="Déconnection" class="deco"/>
+                    <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>
