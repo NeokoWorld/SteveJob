@@ -1,7 +1,10 @@
 <?php
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="connexion.css">';
-include '../Base/header.php';?>
+include '../Base/header.php';
+print_r($_SESSION);
+?>
+
 
 <main>
         <div>

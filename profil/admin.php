@@ -59,6 +59,7 @@ include '../Base/header.php';
                 <br></br>
                 <div>
                     <input type="button" action="" value="Déconnection" class="deco"/>
+                    <a href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>
