@@ -1,9 +1,8 @@
 <?php
 session_start();
 include './PHP/Class.php';
-$co= new Entreprise();
+$co = new Entreprise();
 $creater_entreprise=$co->addEntreprise($_POST['nom'], $_POST['prenom'], $_POST['localite'], $_POST['nbStag'], $_POST['valStag'], $_POST['confPi']);
-var_dump($creater_entreprise);
 
 if($creater_entreprise)
 {
@@ -11,7 +10,7 @@ if($creater_entreprise)
     exit;
 }
 else{
-    echo "L'identifiant ou le mot de passe est incorrect";
+    echo "La création d'entreprise à échouer";
 }
 
 ?>

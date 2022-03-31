@@ -24,19 +24,25 @@ echo '<main>
                     foreach($users->getEntreprise($page*10) as $user)
                     {   
                         $lien_entreprise = "";
-                        $lien_entreprise =  $user['id_fiche']." "."|"." ".$user['Nom']." "."|"." ".$user['Secteur_activite']." "."|"." ".$user['Localite']." "."|"." ".$user['Nb_stagiaire_cesi']." "." stagiaires "." "."|"." ".$user['evaluation_stagiaire']."/5"." |"." ".$user['confiance_pilote']."/5";
+                        $lien_entreprise =  $user['id_fiche']." "."|"." ".$user['Nom']." "."|"." ".$user['Secteur_activite']." "."|"." ".$user['Localite']." "."|"." ".$user['Nb_stagiaire_cesi']." "." stagiaire(s) "." "."|"." ".$user['evaluation_stagiaire']."/5"." |"." ".$user['confiance_pilote']."/5";
                         echo "<div class=\"bdd\"><a class=\"joie\" href = '../profil/entreprise.php?idFiche=".$user['id_fiche']."'>".$lien_entreprise."</a></div>"; 
                     }
                     $users->getEntreprise();
 
-                    $toutesLignes=(int)$users->compterEntreprise();
-$totoalPages = ceil($toutesLignes/10);
-if(isset($_GET['page']) && !empty($_GET['page'])){
-    $currentPage = (int) strip_tags($_GET['page'])-1;
-}else{
-    $currentPage = 0;
-}
+                    $toutesLignes=(int)$users->compterEntreprise();     
+                    $totoalPages = ceil($toutesLignes/10);
+                    if(isset($_GET['page']) && !empty($_GET['page'])){
+                        $currentPage = (int) strip_tags($_GET['page'])-1;
+                    }else{
+                        $currentPage = 0;
+                    }
                     ?>
+                    <form method="get" action="../delete/delete.php">
+                    <div class="col-6"><input type="id" name="id_fiche" placeholder="Saisissez l'id" required/></div>
+                    <div class="col-3">
+                    </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>
+                    </form>
+                    
                     <nav>
     <ul class="pagination justify-content-center">
         <li class="page-item <?php if($page<=0){echo 'disabled';} ?>">
