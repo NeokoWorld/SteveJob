@@ -25,6 +25,9 @@ echo '<main>
                     
                         <div class="col-6"><label for="dur">Durée</label></div>
                         <div class="col-6"><input type="text" name="dur" placeholder="Saisissez un prenom" required/></div>
+
+                        <div class="col-6"><label for="em">Date d\'emission</label></div>
+                        <div class="col-6"><input type="date" name="em" placeholder="Saisissez la date d\'emission" required/></div>
                     
                         <div class="col-6"><label for="remu">Rémunération</label></div>
                         <div class="col-6"><input type="text" name="remu" placeholder="Saisissez la Remuneration" required/></div>
