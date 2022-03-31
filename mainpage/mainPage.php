@@ -49,7 +49,7 @@ echo '<main>
         </div>
         </br>
         <div class="text-center" style="width:75%;margin:auto;">
-            <section><h5><strong>Offre de stage</strong></h5>';
+            <section><h5><strong>Offres de stage</strong></h5>';
 require '../PHP/Class.php';
 
 $users = new Offre();

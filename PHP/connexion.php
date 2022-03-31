@@ -3,7 +3,6 @@ session_start();
 include 'Class.php';
 $co= new LoginRepository();
 $verif=$co->login($_POST['login'],hash('md5', $_POST['mdp']));
-//print_r($verif);
 
 if(count($verif)>0)
 {

@@ -14,26 +14,28 @@ if(@$_SESSION['auth']==true){
                         +
                     </a>
                     <div class="text-center col-11">
-                        <article class="prof"> Profil
+                        <article class="prof"> 
                             <div style="width: 65%; margin:auto;">
                                 <img src="../assets/images/dieu.jpg"></img>
                                 <br>
                                 <div class="row" style="margin-top:50px;">
                                     <div class="col-sm-1">Prénom</div>
-                                    <div class="col-sm-11"><input type="prenom" class="col-sm-6" placeholder="Prenom"
-                                            id="prenom" required /></div>
+                                    <div class="col-sm-11"><input type="text" class="col-sm-6" placeholder="Prenom" id="prenom" required /></div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-1">Nom</div>
-                                    <div class="col-sm-11"><input type="Nom" class="col-sm-6" placeholder="Nom"
-                                            id="nom" required /></div>
+                                    <div class="col-sm-11"><input type="text" class="col-sm-6" placeholder="Nom" id="nom" required /></div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-1">Email</div>
-                                    <div class="col-sm-11"><input type="Email" class="col-sm-6" placeholder="Email"
-                                            id="email" required /></div>
+                                    <div class="col-sm-11"><input type="email" class="col-sm-6" placeholder="Email" id="email" required /></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-1">Centre</div>
+                                    <div class="col-sm-11"><input type="text" class="col-sm-6" placeholder="Centre" id="centre" required /></div>
                                 </div>
                                 <br>
                             </div>
@@ -57,7 +59,9 @@ if(@$_SESSION['auth']==true){
                     <br></br>
                     <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                     <br></br>
-                    <a href="../creation/creation_pilote.php">Création</a>
+                    <a href="../creation/creation_profil.php">Création de profil</a>
+                    <br></br>
+                    <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
                     <br></br>
                     <div>
                         <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>

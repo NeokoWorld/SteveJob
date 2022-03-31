@@ -27,7 +27,6 @@ class LoginRepository {
     
 }
 
-
 // ######################### Offre de stage ##########################
 class Offre {
     private $_connexion; //PDO

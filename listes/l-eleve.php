@@ -95,7 +95,9 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                             <br></br>
                             <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                             <br></br>
-                            <a href="../creation/creation.php">Création</a>
+                            <a href="../creation/creation_profil.php">Création de profil</a>
+                            <br></br>
+                            <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
                             <br></br>';
                             break;
                         case 2 :
