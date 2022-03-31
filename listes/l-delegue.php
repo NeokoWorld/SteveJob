@@ -109,7 +109,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
         </div>
     </main>
 
-<?php include '../Base/footer.php';
+<?php echo include '../Base/footer.php';
 }else{
     header("Location:../connexion/connexion.php");
     exit;

@@ -1,5 +1,4 @@
-<?php
-echo '    <footer class="text-center">Contacts<br/>
+<footer class="text-center">Contacts<br/>
     <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
     <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
@@ -9,6 +8,4 @@ echo '    <footer class="text-center">Contacts<br/>
 <script src="../assets/vendors/jquery-3.6.0.js"></script>
 <script src="../assets/vendors/js/bootstrap.bundle.min.js"></script>
 </body>
-
-</html>'
-?>
+</html>
