@@ -13,7 +13,7 @@ echo '<main>
                     +
                 </a>
                 <div class="text-center col-11">
-                    <article class="prof">Liste des entreprises';
+                    <article class="prof">Liste des offres';
                     require '../PHP/Class.php';
                     $users = new Offre();
                     if (isset($_GET['page']) && !empty($_GET['page'])){
@@ -38,11 +38,6 @@ echo '<main>
                         $currentPage = 0;
                     }
                     ?>
-                    <form method="get" action="../delete/delete_offre.php">
-                    <div class="col-6"><input type="id" name="id_offre" placeholder="Saisissez l'id" required/></div>
-                    <div class="col-3">
-                    </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>
-                    </form>
                     
                     <nav>
     <ul class="pagination justify-content-center">
@@ -60,7 +55,7 @@ echo '<main>
     </ul>
 </nav>
                     <?php echo '</article>
-                    <form method="get" action="../delete/delete.php">
+                    <form method="get" action="../delete/delete_offre.php">
                     <span><input type="id" name="id_fiche" placeholder="Saisissez l\'id" required/></span>
                         <span><input type="submit" value="Supprimer" name="supprimer" /></span>
                         </form>

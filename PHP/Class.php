@@ -63,17 +63,24 @@ class Offre {
         return $utilisateur->fetch();
     }
 
-    public function addOffre()
+    public function addOffre($competence, $localite, $entreprise, $duree, $remuneration, $date_offre, $id_fiche)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query("");
-        return $utilisateur->fetch();
+        $stmt = $this->_connexion->prepare("INSERT INTO projet.offre_de_stage (competences, localite, entreprise, duree, remuneration, date_offre, id_fiche) VALUES (?, ?, ?, ?, ?, ?, ?);");
+        $stmt -> bindValue(1, $competence, PDO::PARAM_STR); 
+        $stmt -> bindValue(2, $localite, PDO::PARAM_STR); 
+        $stmt -> bindValue(3, $entreprise, PDO::PARAM_STR); 
+        $stmt -> bindValue(4, $duree, PDO::PARAM_INT); 
+        $stmt -> bindValue(5, $remuneration, PDO::PARAM_INT); 
+        $stmt -> bindValue(6, $date_offre, PDO::PARAM_STR);
+        $stmt -> bindValue(7, $id_fiche, PDO::PARAM_INT); 
+        return $stmt -> execute();
     }
 
     public function delOffre($id_offre)
     {
         $this->connexion();
-        $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `offre_de_stage`.`id_offre` = ? ;");
+        $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `id_offre` = ? ;");
         $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); //id_pilote
         return $stmt -> execute();
     }

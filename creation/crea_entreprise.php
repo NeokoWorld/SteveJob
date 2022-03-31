@@ -10,7 +10,7 @@ if($creater_entreprise)
     exit;
 }
 else{
-    echo "La création d'entreprise à échouer";
+    echo "La création d'entreprise a échouée";
 }
 
 ?>

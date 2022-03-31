@@ -8,10 +8,9 @@ include '../Base/header.php';
 echo '<main>
 <div class="container">
     <div class="row">
-        <form action="" method="post" class="text-center">
+        <form action="./crea_offre.php" method="post" class="text-center">
             <fieldset>
                 <legend>Création d\'une offre</legend>
-                
                     <div class="row">
                         
                         <div class="col-6"><label for="comp">Competences</label></div>
@@ -24,7 +23,7 @@ echo '<main>
                         <div class="col-6"><input type="text" name="ent" placeholder="Saisissez l\'entreprise" required/></div>
                     
                         <div class="col-6"><label for="dur">Durée</label></div>
-                        <div class="col-6"><input type="text" name="dur" placeholder="Saisissez un prenom" required/></div>
+                        <div class="col-6"><input type="text" name="dur" placeholder="Saisissez une durée" required/></div>
 
                         <div class="col-6"><label for="em">Date d\'emission</label></div>
                         <div class="col-6"><input type="date" name="em" placeholder="Saisissez la date d\'emission" required/></div>
