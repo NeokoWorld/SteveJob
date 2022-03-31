@@ -26,7 +26,7 @@ echo '<main>
                         $date = new DateTime($user['date_offre']);
                         $lien = "";
                         $lien =  $user['id_offre']." "."|"." ".$user['competences']." "."|"." ".$user['localite']." "."|"." ".$user['entreprise']." "."|"." ".$user['duree']." "." semaines"." "."|"." ".$user['remuneration']." ". '€' ." "."|"." ".date_format($date, 'd-m-Y')." "."|"." ".$user['id_fiche']." ";
-                        echo "<div class=\"bdd\"><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$user['id_offre']."'>".$lien."</a></div>";
+                        echo "<div class=\"bdd\"><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$user['id_offre']."'><b>".$lien."</b></a></div>";
                     }
                     $users->getOffre();
 

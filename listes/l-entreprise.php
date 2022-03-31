@@ -25,7 +25,7 @@ echo '<main>
                     {   
                         $lien_entreprise = "";
                         $lien_entreprise =  $user['id_fiche']." "."|"." ".$user['Nom']." "."|"." ".$user['Secteur_activite']." "."|"." ".$user['Localite']." "."|"." ".$user['Nb_stagiaire_cesi']." "." stagiaire(s) "." "."|"." ".$user['evaluation_stagiaire']."/5"." |"." ".$user['confiance_pilote']."/5";
-                        echo "<div class=\"bdd\"><a class=\"joie\" href = '../profil/entreprise.php?idFiche=".$user['id_fiche']."'>".$lien_entreprise."</a></div>"; 
+                        echo "<div class=\"bdd\"><a class=\"joie\" href = '../profil/entreprise.php?idFiche=".$user['id_fiche']."'><b>".$lien_entreprise."</b></a></div>"; 
                     }
                     $users->getEntreprise();
 
