@@ -20,7 +20,7 @@ foreach ($names->getElevebyName($_GET['Recherche']) as $name)
 {
     $lien = "";
     $lien =  $name['nom']." "."|"." ".$name['prenom']." "."|"." ".$name['centre']." "."|"." ".$name['email']." "."|"." ".$name['id_user']." ";
-    echo "<div class=\"etudiant\"><h5><strong>Etudiant</strong></h5><a class=\"joie\" href = '../profil/etudiant.php?idUser=".$name['id_user']."'>".$lien."</a></div>";
+    echo "<div class=\"etudiant\"><h5><strong>Etudiant</strong></h5><a class=\"joie\" href = '../profil/etudiant.php?idUser=".$name['id_user']."'><b>".$lien."</b></a></div>";
 }
 $names->getElevebyName($_GET['Recherche']);
 
@@ -29,7 +29,7 @@ foreach ($names->getPilotebyName($_GET['Recherche']) as $name)
 {
     $lien = "";
     $lien =  $name['nom']." "."|"." ".$name['prenom']." "."|"." ".$name['centre']." "."|"." ".$name['email']." "."|"." ".$name['id_user']." ";
-    echo "<div class=\"pilote\"><h5><strong>Pilote</strong></h5><a class=\"joie\" href = '../profil/avion.php?idPilote=".$name['id_user']."'>".$lien."</a></div>";
+    echo "<div class=\"pilote\"><h5><strong>Pilote</strong></h5><a class=\"joie\" href = '../profil/avion.php?idPilote=".$name['id_user']."'><b>".$lien."</b></a></div>";
 }
 $names->getPilotebyName($_GET['Recherche']);
 
@@ -38,7 +38,7 @@ foreach ($names->getEntreprisebyName($_GET['Recherche']) as $name)
 {
     $lien = "";
     $lien =  $name['Nom']." "."|"." ".$name['Secteur_activite']." "."|"." ".$name['Localite']." "."|"." ".$name['Nb_stagiaire_cesi']." "." stagiaires "."|"." ".$name['evaluation_stagiaire']."/5 "."|"." ".$name['confiance_pilote']."/5 "." ";
-    echo "<div class=\"entreprise\"><h5><strong>Entreprise</strong></h5><a class=\"joie\" href = '../profil/entreprise.php?idFiche=".$name['id_fiche']."'>".$lien."</a></div>";
+    echo "<div class=\"entreprise\"><h5><strong>Entreprise</strong></h5><a class=\"joie\" href = '../profil/entreprise.php?idFiche=".$name['id_fiche']."'><b>".$lien."</b></a></div>";
 }
 $names->getEntreprisebyName($_GET['Recherche']);
 
@@ -48,7 +48,7 @@ foreach ($competences->getOffrebyComp($_GET['Recherche']) as $competence)
     $date = new DateTime($competence['date_offre']);
     $lien = "";
     $lien =  $competence['id_offre']." "."|"." ".$competence['localite']." "."|"." ".$competence['entreprise']." "."|"." ".$competence['competences']." "."|"." ".$competence['duree']." ". 'semaines'." "."|"." ".$competence['remuneration']." ". '€' ." "."|"." ".date_format($date, 'd-m-Y')." "."|"." ".$competence['id_fiche']." ";
-    echo "<div class=\"offre\"><h5><strong>Offre de stage</strong></h5><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$competence['id_offre']."'>".$lien."</a></div>";
+    echo "<div class=\"offre\"><h5><strong>Offre de stage</strong></h5><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$competence['id_offre']."'><b>".$lien."</b></a></div>";
 }
 
 

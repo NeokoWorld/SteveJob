@@ -1,44 +1,53 @@
-section{
-    height:500px;
-    overflow:auto;
+section {
+    height: 500px;
+    overflow: auto;
     background-color: #6d5d5d;
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }
-#mainCarousel{
+
+#mainCarousel {
     width: 75%;
-    margin:auto;
-    border:2px solid white;
+    margin: auto;
+    border: 2px solid white;
 }
-html,body{
-    padding:0;
+
+html,
+body {
+    padding: 0;
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
 }
-main{
+
+main {
     background-color: #c5a7a1;
-    padding:0;
-    padding-top:60px;
+    padding: 0;
+    padding-top: 60px;
 }
-footer{
+
+footer {
     background-color: #2b241f;
-    color:azure;
+    color: azure;
 }
-.pad{
-    padding-top:1px
+
+.pad {
+    padding-top: 1px
 }
-footer a{
+
+footer a {
     padding: 0 5px;
-    color:blanchedalmond;
+    color: blanchedalmond;
 }
-.bdd{
+
+.bdd {
     background-color: #a78c86;
     border: 2px solid whitesmoke;
     border-radius: 20px;
-    padding:4px;
-    margin:5px;
+    padding: 4px;
+    margin: 5px;
 }
-.joie{
+
+.joie {
     text-decoration: none;
-    color:black;
+    color: black;
 }

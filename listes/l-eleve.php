@@ -22,7 +22,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
     $page = 0;
 }
 foreach ($users->getEleve($page * 10) as $user) {
-    echo '<div class="bdd"> ';
+    echo '<div class="bdd"><b> ';
     echo $user['id_eleve'], " ";
     echo $user['nom'], " ";
     echo $user['prenom'], " ";
@@ -30,7 +30,7 @@ foreach ($users->getEleve($page * 10) as $user) {
     echo $user['Promotion'], " ";
     echo $user['email'], " ";
     echo $user['id_user'], " ";
-    echo '</div>';
+    echo '</b></div>';
 }
 $users->getEleve();
 $toutesLignes = (int)$users->compterEleve();
@@ -87,7 +87,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
             <div class="offcanvas-body" style="color :black;">
             <?php
                 if(@$_SESSION['auth']==true){
-                    switch ($_SESSION['user']['ID_Role']){
+                    switch ($_SESSION['user']['ID_Role']){  
                         case 1 :
                             echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
                             <br></br>
@@ -95,21 +95,15 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                             <br></br>
                             <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                             <br></br>
-                            <a href="../listes/l-offre.php">Listes des offres de stage</a>
-                            <br></br>
-                            <a href="../creation/creation_profil.php">Création d\'un profil</a>
+                            <a href="../creation/creation_profil.php">Création de profil</a>
                             <br></br>
                             <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
                             <br></br>';
                             break;
                         case 2 :
                              echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
-                             <br></br>
-                             <a href="../listes/l-entreprise.php">Liste des entreprises</a>
-                             <br></br>
-                             <a href="../listes/l-offre.php">Liste des offres de stage</a>
                              <br></br>';
-                            break;
+                             break;
                     }
                 }
                 echo '<div>

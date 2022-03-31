@@ -23,7 +23,7 @@ include '../Base/header.php';
                     }
                     foreach($users->getPilote($page*10) as $user)
                     {   
-                        echo '<div class="bdd">';
+                        echo '<div class="bdd"><b>';
                         echo $user['id_pilote'] , " " ;
                         echo $user['nom'] , " ";
                         echo $user['prenom'] , " ";
@@ -31,7 +31,7 @@ include '../Base/header.php';
                         echo $user['centre'] , " ";
                         echo $user['promotion_assignees'] , " ";
                         echo $user['id_user'] , " ";
-                        echo '</div>';
+                        echo '</b></div>';
                     }
                     $users->getPilote();
                     
