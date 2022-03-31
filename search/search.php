@@ -25,6 +25,15 @@ foreach ($names->getElevebyName($_GET['Recherche']) as $name)
 $names->getElevebyName($_GET['Recherche']);
 
 $names = new Recherche();
+foreach ($names->getDeleguebyName($_GET['Recherche']) as $name) 
+{
+    $lien = "";
+    $lien =  $name['nom']." "."|"." ".$name['prenom']." "."|"." ".$name['centre']." "."|"." ".$name['email']." "."|"." ".$name['id_user']." ";
+    echo "<div class=\"delegue\"><h5><strong>Delegue</strong></h5><a class=\"joie\" href = '../profil/jean.php?idUser=".$name['id_user']."'><b>".$lien."</b></a></div>";
+}
+$names->getDeleguebyName($_GET['Recherche']);
+
+$names = new Recherche();
 foreach ($names->getPilotebyName($_GET['Recherche']) as $name) 
 {
     $lien = "";

@@ -12,8 +12,11 @@
                             echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a>';
                             break;
                         case 2 :
-                             echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a>';
-                             break;
+                            echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a>';
+                            break;
+                        case 3 :
+                            echo '<a class="navbar-brand pad" href="../profil/delegue.php">Profil</a>';
+                            break;
                         case 4 :
                             echo '<a class="navbar-brand pad" href="../profil/eleve.php">Profil</a>';
                             break;

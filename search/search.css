@@ -101,6 +101,14 @@ a{
     margin:5px;
     color: black;
 }
+.delegue{
+    padding:17px;
+    background-color: #9f0087;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    margin:5px;
+    color: black;
+}
 .joie{
     text-decoration: none;
     color:black;

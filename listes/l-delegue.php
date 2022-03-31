@@ -13,23 +13,23 @@ echo '<main>
                     +
                 </a>
                 <div class="text-center col-11">
-                    <article class="prof">Liste des élèves';
+                    <article class="prof">Liste des délegués';
 require '../PHP/Class.php';
-$users = new Eleve();
+$users = new Delegue();
 if (isset($_GET['page']) && !empty($_GET['page'])) {
     $page = $_GET['page'] - 1;
 } else {
     $page = 0;
 }
-foreach ($users->getEleve($page * 10) as $user) 
+foreach ($users->getDelegue($page * 10) as $user) 
 {
     $lien = "";
     $lien =  $user['nom']." "."|"." ".$user['prenom']." "."|"." ".$user['centre']." "."|"." ".$user['email']." "."|"." ".$user['id_user']." ";
-    echo "<div class=\"bdd\"><a class=\"joie\" href = '../profil/etudiant.php?idUser=".$user['id_user']."'><b>".$lien."</b></a></div>"; 
+    echo "<div class=\"bdd\"><a class=\"joie\" href = '../profil/jean.php?idUser=".$user['id_user']."'><b>".$lien."</b></a></div>"; 
 }
+$users->getDelegue();
 
-$users->getEleve();
-$toutesLignes = (int)$users->compterEleve();
+$toutesLignes = (int)$users->compterDelegue();
 $totoalPages = ceil($toutesLignes / 10);
 if (isset($_GET['page']) && !empty($_GET['page'])) {
     $currentPage = (int) strip_tags($_GET['page']) - 1;
@@ -85,11 +85,8 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
-            <?php
-                if(@$_SESSION['auth']==true){
-                    switch ($_SESSION['user']['ID_Role']){  
-                        case 1 :
-                            echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
+                            <a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br>
+                            <a href="../listes/l-eleve.php">Liste des élèves</a>
                             <br></br>
                             <a href="../listes/l-pilote.php">Listes des pilotes</a>
                             <br></br>
@@ -97,25 +94,18 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                             <br></br>
                             <a href="../creation/creation_profil.php">Création de profil</a>
                             <br></br>
-                            <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
+                            <a href="../creation/creation_entreprise.php">Création d'une entreprise</a>
                             <br></br>
-                            <a href="../creation/creation_offre.php">Création d\'une offre</a>
-                            <br></br>';
-                            break;
-                        case 2 :
-                             echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
-                             <br></br>';
-                             break;
-                    }
-                }
-                echo '<div>
+                            <a href="../creation/creation_offre.php">Création d'une offre</a>
+                            <br></br>
+                <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>
-    </main>';
+    </main>
 
-echo include '../Base/footer.php';
+<?php echo include '../Base/footer.php';
 }else{
     header("Location:../connexion/connexion.php");
     exit;

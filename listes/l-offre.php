@@ -25,7 +25,7 @@ echo '<main>
                     {   
                         $date = new DateTime($user['date_offre']);
                         $lien = "";
-                        $lien =  $user['id_offre']." "."|"." ".$user['competences']." "."|"." ".$user['localite']." "."|"." ".$user['entreprise']." "."|"." ".$user['duree']." "." semaines"." "."|"." ".$user['remuneration']." ". '€' ." "."|"." ".date_format($date, 'd-m-Y')." "."|"." ".$user['id_fiche']." ";
+                        $lien =  $user['competences']." "."|"." ".$user['localite']." "."|"." ".$user['entreprise']." "."|"." ".$user['duree']." "." semaines"." "."|"." ".$user['remuneration']." ". '€' ." "."|"." ".date_format($date, 'd-m-Y')." "."|"." ".$user['id_fiche']." ";
                         echo "<div class=\"bdd\"><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$user['id_offre']."'><b>".$lien."</b></a></div>";
                     }
                     $users->getOffre();
@@ -100,6 +100,15 @@ echo '<main>
                          <a href="../creation/creation_offre.php">Création d\'une offre</a>
                          <br></br>';
                          break;
+                    case 3 :
+                        echo '<a class="navbar-brand pad" href="../profil/delegue.php">Profil</a>
+                        <br></br>
+                        <a href="../listes/l-offre.php">Liste des offres</a>
+                        <br></br>
+                        <a href="../creation/creation_offre.php">Création d\'une offre</a>
+                        <br></br>';
+                        break;    
+
                 }
             }
                 echo'<div>

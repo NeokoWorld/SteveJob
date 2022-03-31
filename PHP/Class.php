@@ -226,6 +226,64 @@ class Eleve {
     }
 }
 
+// ######################### Delegue ##########################
+class Delegue {
+    private $_connexion; //PDO
+
+    private function connexion()
+    {
+        try {
+            $this->_connexion = new PDO('mysql:host=localhost;dbname=projet;port=3307;' , 'root', 'root'); 
+        } 
+        catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+        }
+    }
+
+    public function getDelegue($offset=0)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT * FROM user where id_ROLE = 3 LIMIT $offset,10");
+        return $utilisateur->fetchAll();
+    }
+
+    public function getDeleguebyID($id)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT * FROM user WHERE id_user = $id");
+        return $utilisateur->fetch();
+    }
+
+    public function compterDelegue(){
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM eleve');
+        $nombre =$utilisateur->fetch();
+        return $nombre['nombre'];
+    }
+
+    public function addDelegue()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function delDelegue()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+
+    public function UpDelegue()
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
+}
+
 // ######################### Pilote ##########################
 class Pilote {
     private $_connexion; //PDO
@@ -313,6 +371,16 @@ class Recherche {
     {
         $this->connexion();
         $stmt = $this->_connexion->prepare("SELECT * FROM user WHERE prenom LIKE ? and id_role=4");
+        $query = $name.'%';
+        $stmt -> bindValue(1, $query, PDO::PARAM_STR);
+        $stmt -> execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getDeleguebyName($name)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("SELECT * FROM user WHERE prenom LIKE ? and id_role=3");
         $query = $name.'%';
         $stmt -> bindValue(1, $query, PDO::PARAM_STR);
         $stmt -> execute();
