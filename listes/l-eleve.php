@@ -104,8 +104,12 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                             break;
                         case 2 :
                              echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
+                             <br></br>
+                             <a href="../listes/l-entreprise.php">Liste des entreprises</a>
+                             <br></br>
+                             <a href="../listes/l-offre.php">Liste des offres de stage</a>
                              <br></br>';
-                             break;
+                            break;
                     }
                 }
                 echo '<div>
