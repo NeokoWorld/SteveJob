@@ -87,6 +87,8 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
                 <br></br>
                 <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
                 <br></br>
+                <a href="../creation/creation_offre.php">Création d\'une offre</a>
+                <br></br>
                 <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>

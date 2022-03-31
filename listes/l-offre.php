@@ -84,6 +84,8 @@ echo '<main>
                         <a href="../creation/creation_profil.php">Création d\'un profil</a>
                         <br></br>
                         <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
+                        <br></br>
+                        <a href="../creation/creation_offre.php">Création d\'une offre</a>
                         <br></br>';
                         break;
                     case 2 :
@@ -94,6 +96,8 @@ echo '<main>
                          <a href="../listes/l-entreprise.php">Liste des entreprises</a>
                          <br></br>
                          <a href="../listes/l-offre.php">Liste des offres de stage</a>
+                         <br></br>
+                         <a href="../creation/creation_offre.php">Création d\'une offre</a>
                          <br></br>';
                          break;
                 }

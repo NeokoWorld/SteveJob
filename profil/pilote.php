@@ -68,6 +68,8 @@ include '../Base/header.php';
                 <br></br>
                 <a href="../listes/l-offre.php">Listes des offres de stage</a>
                 <br></br>
+                <a href="../creation/creation_offre.php">Création d\'une offre</a>
+                <br></br>
                 <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>

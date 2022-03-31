@@ -10,7 +10,7 @@ echo '<main>
     <div class="row">
         <form action="./crea_offre.php" method="post" class="text-center">
             <fieldset>
-                <legend>Création d\'une offre</legend>
+                <legend>Création d\'une offre de stage</legend>
                     <div class="row">
                         
                         <div class="col-6"><label for="comp">Competences</label></div>
@@ -67,6 +67,8 @@ echo '<main>
                 <a href="../listes/l-offre.php">Listes des offres de stage</a>
                 <br></br>
                 <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
+                <br></br>
+                <a href="../creation/creation_offre.php">Création d\'une offre</a>
                 <br></br>
                 <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>

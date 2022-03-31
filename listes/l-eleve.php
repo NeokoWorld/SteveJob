@@ -102,6 +102,8 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                             <a href="../creation/creation_profil.php">Création de profil</a>
                             <br></br>
                             <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
+                            <br></br>
+                            <a href="../creation/creation_offre.php">Création d\'une offre</a>
                             <br></br>';
                             break;
                         case 2 :
