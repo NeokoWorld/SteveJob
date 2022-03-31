@@ -37,7 +37,7 @@ echo '<main>
                         $currentPage = 0;
                     }
                     ?>
-                    <form method="get" action="../delete/delete.php">
+                    <form method="get" action="../delete/delete_entreprise.php">
                     <div class="col-6"><input type="id" name="id_fiche" placeholder="Saisissez l'id" required/></div>
                     <div class="col-3">
                     </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>

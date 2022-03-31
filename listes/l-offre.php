@@ -38,11 +38,11 @@ echo '<main>
                         $currentPage = 0;
                     }
                     ?>
-                    <!-- <form method="get" action="../delete/delete.php">
-                    <div class="col-6"><input type="id" name="id_fiche" placeholder="Saisissez l'id" required/></div>
+                    <form method="get" action="../delete/delete_offre.php">
+                    <div class="col-6"><input type="id" name="id_offre" placeholder="Saisissez l'id" required/></div>
                     <div class="col-3">
                     </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>
-                    </form> -->
+                    </form>
                     
                     <nav>
     <ul class="pagination justify-content-center">

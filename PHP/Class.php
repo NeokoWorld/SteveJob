@@ -70,11 +70,12 @@ class Offre {
         return $utilisateur->fetch();
     }
 
-    public function delOffre()
+    public function delOffre($id_offre)
     {
         $this->connexion();
-        $utilisateur = $this->_connexion->query("");
-        return $utilisateur->fetch();
+        $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `offre_de_stage`.`id_offre` = ? ;");
+        $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); //id_pilote
+        return $stmt -> execute();
     }
 
     public function UpOffre()
