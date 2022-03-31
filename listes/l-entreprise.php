@@ -37,11 +37,6 @@ echo '<main>
                         $currentPage = 0;
                     }
                     ?>
-                    <form method="get" action="../delete/delete.php">
-                    <div class="col-6"><input type="id" name="id_fiche" placeholder="Saisissez l'id" required/></div>
-                    <div class="col-3">
-                    </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>
-                    </form>
                     
                     <nav>
     <ul class="pagination justify-content-center">
@@ -59,6 +54,10 @@ echo '<main>
     </ul>
 </nav>
                     <?php echo '</article>
+                    <form method="get" action="../delete/delete.php">
+                    <span><input type="id" name="id_fiche" placeholder="Saisissez l\'id" required/></span>
+                        <span><input type="submit" value="Supprimer" name="supprimer" /></span>
+                        </form>
                 </div>
             </div>
         </div>

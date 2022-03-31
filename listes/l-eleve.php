@@ -74,6 +74,10 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
 </nav>
 
 </article>
+<form method="get" action="../delete/delete.php">
+            <span><input type="id" name="id_fiche" placeholder="Saisissez l\'id" required/></span>
+                <span><input type="submit" value="Supprimer" name="supprimer" /></span>
+                </form>
                 </div>
             </div>
         </div>
