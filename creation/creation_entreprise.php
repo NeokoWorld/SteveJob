@@ -8,7 +8,7 @@ include '../Base/header.php';
 echo '<main>
 <div class="container">
     <div class="row">
-        <form action="../crea_entreprise.php" method="post" class="text-center">
+        <form action="./crea_entreprise.php" method="post" class="text-center">
             <fieldset>
                 <legend>Création d\'une entreprise</legend>
                 <div class="row">
