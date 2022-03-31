@@ -64,6 +64,10 @@ include '../Base/header.php';
                 <br></br>
                 <a href="../listes/l-eleve.php">Liste d\'élèves</a>
                 <br></br>
+                <a href="../listes/l-entreprise.php">Listes des entreprises</a>
+                <br></br>
+                <a href="../listes/l-offre.php">Listes des offres de stage</a>
+                <br></br>
                 <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>

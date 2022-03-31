@@ -8,3 +8,5 @@ Barre de filtrage pour les offres de stages
 // pour les élèves
 
 Faire la wish liste
+
+Faire le retour vers sois admin sois pilote sur les listes des entreprises et des offres de stages

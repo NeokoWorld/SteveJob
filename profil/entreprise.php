@@ -48,12 +48,12 @@ $detail = $entreprises->getEntreprisebyID($id_Fiche);
                             <br>
                             <div class="row">
                                 <div class="col-sm-3">Evaluation de l\'entreprise</div>
-                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Evalution de l\'entreprise" disabled = "disabled" style="font-weight:bold;" id="evalution" value="'.$detail['evaluation_stagiaire'].'" required /></div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Evalution de l\'entreprise" disabled = "disabled" style="font-weight:bold;" id="evalution" value="'.$detail['evaluation_stagiaire'].' / 5" required /></div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-sm-3">Confiance du pilote</div>
-                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Confiance du pilote" disabled = "disabled" style="font-weight:bold;" id="confiance" value="'.$detail['confiance_pilote'].'" required /></div>
+                                <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Confiance du pilote" disabled = "disabled" style="font-weight:bold;" id="confiance" value="'.$detail['confiance_pilote'].' / 5" required /></div>
                             </div>
                             <br>
                         </div>

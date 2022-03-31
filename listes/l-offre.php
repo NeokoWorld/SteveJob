@@ -5,7 +5,7 @@ include '../Base/head.php';
 echo '<link rel="stylesheet" href="liste.css">';
 include '../Base/header.php';
 
-    echo'<main>
+echo '<main>
         <div class="container">
             <div class="row">
                 <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
@@ -13,36 +13,38 @@ include '../Base/header.php';
                     +
                 </a>
                 <div class="text-center col-11">
-                    <article class="prof">Liste des pilotes';
+                    <article class="prof">Liste des entreprises';
                     require '../PHP/Class.php';
-                    $users = new Pilote();
+                    $users = new Offre();
                     if (isset($_GET['page']) && !empty($_GET['page'])){
                         $page=$_GET['page']-1;
                     }else{
                      $page=0;
                     }
-                    foreach($users->getPilote($page*10) as $user)
+                    foreach($users->getOffre($page*10) as $user)
                     {   
-                        echo '<div class="bdd">';
-                        echo $user['id_pilote'] , " " ;
-                        echo $user['nom'] , " ";
-                        echo $user['prenom'] , " ";
-                        echo $user['email'] , " ";
-                        echo $user['centre'] , " ";
-                        echo $user['promotion_assignees'] , " ";
-                        echo $user['id_user'] , " ";
-                        echo '</div>';
+                        $date = new DateTime($user['date_offre']);
+                        $lien = "";
+                        $lien =  $user['id_offre']." "."|"." ".$user['competences']." "."|"." ".$user['localite']." "."|"." ".$user['entreprise']." "."|"." ".$user['duree']." "." semaines"." "."|"." ".$user['remuneration']." ". '€' ." "."|"." ".date_format($date, 'd-m-Y')." "."|"." ".$user['id_fiche']." ";
+                        echo "<div class=\"bdd\"><a class=\"joie\" href = '../mineures/offre.php?idOffre=".$user['id_offre']."'>".$lien."</a></div>";
                     }
-                    $users->getPilote();
+                    $users->getOffre();
+
+                    $toutesLignes=(int)$users->compterOffre();     
+                    $totoalPages = ceil($toutesLignes/10);
+                    if(isset($_GET['page']) && !empty($_GET['page'])){
+                        $currentPage = (int) strip_tags($_GET['page'])-1;
+                    }else{
+                        $currentPage = 0;
+                    }
+                    ?>
+                    <!-- <form method="get" action="../delete/delete.php">
+                    <div class="col-6"><input type="id" name="id_fiche" placeholder="Saisissez l'id" required/></div>
+                    <div class="col-3">
+                    </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>
+                    </form> -->
                     
-                    $toutesLignes=(int)$users->compterPilote();
-$totoalPages = ceil($toutesLignes/10);
-if(isset($_GET['page']) && !empty($_GET['page'])){
-    $currentPage = (int) strip_tags($_GET['page'])-1;
-}else{
-    $currentPage = 0;
-}?>
-<nav>
+                    <nav>
     <ul class="pagination justify-content-center">
         <li class="page-item <?php if($page<=0){echo 'disabled';} ?>">
             <a class="page-link" href="<?php if($page<0){echo '#';} else{echo "?page=".($currentPage-1);}?>">Precedent</a>
@@ -57,7 +59,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
         </li>
     </ul>
 </nav>
-                    <?php echo'</article>
+                    <?php echo '</article>
                 </div>
             </div>
         </div>
@@ -94,5 +96,4 @@ include '../Base/footer.php';
     header("Location:../connexion/connexion.php");
     exit;
 }
-?>
 ?>
