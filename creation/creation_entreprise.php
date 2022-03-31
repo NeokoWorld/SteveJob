@@ -57,6 +57,8 @@ echo '<main>
                 <br></br>
                 <a href="../listes/l-pilote.php">Listes des pilotes</a>
                 <br></br>
+                <a href="../listes/l-delegue.php">Listes des délegués</a>
+                <br></br>
                 <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                 <br></br>
                 <a href="../listes/l-offre.php">Listes des offres de stage</a>

@@ -71,7 +71,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
 
 </article>
 <form method="get" action="../delete/delete.php">
-            <span><input type="id" name="id_fiche" placeholder="Saisissez l\'id" required/></span>
+            <span><input type="id" name="id_fiche" placeholder="Saisissez l'id" required/></span>
                 <span><input type="submit" value="Supprimer" name="supprimer" /></span>
                 </form>
                 </div>
@@ -93,7 +93,11 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
                             <br></br>
                             <a href="../listes/l-pilote.php">Listes des pilotes</a>
                             <br></br>
+                            <a href="../listes/l-delegue.php">Listes des délegués</a>
+                            <br></br>
                             <a href="../listes/l-entreprise.php">Listes des entreprises</a>
+                            <br></br>
+                            <a href="../listes/l-offre.php">Listes des offres de stage</a>
                             <br></br>
                             <a href="../creation/creation_profil.php">Création de profil</a>
                             <br></br>

@@ -57,9 +57,12 @@ echo '<main>
             if(@$_SESSION['auth']==true){
                 switch ($_SESSION['user']['ID_Role']){
                     case 1 :
-                        echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br><a href="../listes/l-eleve.php">Liste des élèves</a>
+                        echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br>
+                        <a href="../listes/l-eleve.php">Liste des élèves</a>
                         <br></br>
                         <a href="../listes/l-pilote.php">Listes des pilotes</a>
+                        <br></br>
+                        <a href="../listes/l-delegue.php">Listes des délegués</a>
                         <br></br>
                         <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                         <br></br>
