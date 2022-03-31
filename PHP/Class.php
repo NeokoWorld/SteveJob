@@ -173,6 +173,14 @@ class Eleve {
         $utilisateur = $this->_connexion->query("SELECT eleve.id_eleve, eleve.Promotion,eleve.id_user, user.nom, user.prenom, user.email, user.centre FROM eleve INNER JOIN user ON eleve.id_user = user.id_user LIMIT $offset,10");
         return $utilisateur->fetchAll();
     }
+
+    public function getElevebyID($id)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT * FROM user WHERE id_user = $id");
+        return $utilisateur->fetch();
+    }
+
     public function compterEleve(){
         $this->connexion();
         $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM eleve');
@@ -224,6 +232,13 @@ class Pilote {
         return $utilisateur->fetchAll();
     }
 
+    public function getPilotebyID($id)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT * FROM user WHERE id_user = $id");
+        return $utilisateur->fetch();
+    }
+
     public function compterPilote(){
         $this->connexion();
         $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM pilote');
@@ -231,24 +246,12 @@ class Pilote {
         return $nombre['nombre'];
     }
 
-    // public function addPilote()
-    // {
-    //     $this->connexion();
-    //     $stmt = $this->_connexion->prepare("INSERT INTO projet.authentification (login, mdp) VALUES ( ?, ? ); INSERT INTO projet.user (nom, prenom, email, centre, ID_Role, id_auth) VALUES (?, ?, ?, ?, ?, ?); INSERT INTO projet.pilote (id_pilote, promotion_assignees, id_user) VALUES ('', ?, ?);");
-    //     $query = .'%';
-    //     $stmt -> bindValue(1, $query, PDO::PARAM_STR); //login
-    //     $stmt -> bindValue(2, $query, PDO::PARAM_STR); //mdp
-    //     $stmt -> bindValue(3, $query, PDO::PARAM_STR); //nom
-    //     $stmt -> bindValue(4, $query, PDO::PARAM_STR); //prenom
-    //     $stmt -> bindValue(5, $query, PDO::PARAM_STR); //email
-    //     $stmt -> bindValue(6, $query, PDO::PARAM_STR); //centre
-    //     $stmt -> bindValue(7, $query, PDO::PARAM_INT); //ID_Role
-    //     $stmt -> bindValue(8, $query, PDO::PARAM_INT); //id_auth
-    //     $stmt -> bindValue(9, $query, PDO::PARAM_STR); //promotion_assignees
-    //     $stmt -> bindValue(10, $query, PDO::PARAM_INT); //id_user
-    //     $stmt -> execute();
-    //     return $stmt->fetch();
-    // }
+    public function addPilote()
+    {
+         $this->connexion();
+        $utilisateur = $this->_connexion->query("");
+        return $utilisateur->fetch();
+    }
 
     public function getOffrebyComp($competence)
     {

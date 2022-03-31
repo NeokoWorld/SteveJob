@@ -16,29 +16,20 @@ echo '<main>
 require'../PHP/Class.php';
 
 $names = new Recherche();
-foreach ($names->getElevebyName($_GET['Recherche']) as $name) {
-    echo '<div class="eleve"> ';
-    echo "<h5><strong>Etudiant</strong></h5>";
-    echo $name['nom'], " |" , " ";
-    echo $name['prenom'], " |" , " ";
-    echo $name['centre'], " |" , " ";
-    echo $name['email'], " |" , " ";
-    echo $name['id_user'], " ";
-    echo '</div>';
+foreach ($names->getElevebyName($_GET['Recherche']) as $name) 
+{
+    $lien = "";
+    $lien =  $name['nom']." "."|"." ".$name['prenom']." "."|"." ".$name['centre']." "."|"." ".$name['email']." "."|"." ".$name['id_user']." ";
+    echo "<div class=\"etudiant\"><h5><strong>Etudiant</strong></h5><a class=\"joie\" href = '../profil/etudiant.php?idUser=".$name['id_user']."'>".$lien."</a></div>";
 }
 $names->getElevebyName($_GET['Recherche']);
 
 $names = new Recherche();
 foreach ($names->getPilotebyName($_GET['Recherche']) as $name) 
 {
-    echo '<div class="pilote"> ';
-    echo "<h5><strong>Pilote</strong></h5>";
-    echo $name['nom'], " |" , " ";
-    echo $name['prenom'], " |" , " ";
-    echo $name['centre'], " |" , " ";
-    echo $name['email'], " |" , " ";
-    echo $name['id_user'], " ";
-    echo '</div>';
+    $lien = "";
+    $lien =  $name['nom']." "."|"." ".$name['prenom']." "."|"." ".$name['centre']." "."|"." ".$name['email']." "."|"." ".$name['id_user']." ";
+    echo "<div class=\"pilote\"><h5><strong>Pilote</strong></h5><a class=\"joie\" href = '../profil/avion.php?idPilote=".$name['id_user']."'>".$lien."</a></div>";
 }
 $names->getPilotebyName($_GET['Recherche']);
 
