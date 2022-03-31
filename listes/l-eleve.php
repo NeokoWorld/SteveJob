@@ -119,7 +119,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
         </div>
     </main>';
 
-echo include '../Base/footer.php';
+include '../Base/footer.php';
 }else{
     header("Location:../connexion/connexion.php");
     exit;
