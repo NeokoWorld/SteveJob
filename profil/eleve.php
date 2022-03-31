@@ -64,7 +64,7 @@ include '../Base/header.php';
                 <br></br>
                 <a href="wish.php">Wish-Liste</a>
                 <br></br>
-                <a href="offre.php">Offre de stage postulée</a>
+                <a href="offre-postule.php">Offre de stage postulée</a>
                 <br></br>
                 <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>

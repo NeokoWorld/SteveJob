@@ -4,9 +4,9 @@ echo '<link rel="stylesheet" href="info.css">';
 include '../Base/header.php';
 echo '<main>
 <div class="container">
-    <div class="row">
-        <article class="col-sm-1" style="text-align:center;">Filtrage</article>
-        <article class="col-sm-11">';
+    <div class="row">';
+        // <article class="col-1" style="text-align:center;">Filtrage</article>
+        echo'<article class="col-12">';
         require '../PHP/Class.php';
         $users = new Offre();
         if (isset($_GET['page']) && !empty($_GET['page'])){
