@@ -19,32 +19,27 @@ include '../Base/header.php';
                             <br>
                             <div class="row" style="margin-top:50px;">
                                 <div class="col-sm-1">Prénom</div>
-                                <div class="col-sm-11"><input type="prenom" class="col-sm-6" placeholder="Prenom"
-                                        id="prenom" required /></div>
+                                <div class="col-sm-11"><input type="prenom" class="col-sm-6" placeholder="Prenom" id="prenom" required /></div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-sm-1">Nom</div>
-                                <div class="col-sm-11"><input type="Nom" class="col-sm-6" placeholder="Nom"
-                                        id="nom" required /></div>
+                                <div class="col-sm-11"><input type="Nom" class="col-sm-6" placeholder="Nom" id="nom" required /></div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-sm-1">Email</div>
-                                <div class="col-sm-11"><input type="Email" class="col-sm-6" placeholder="Email"
-                                        id="email" required /></div>
+                                <div class="col-sm-11"><input type="Email" class="col-sm-6" placeholder="Email" id="email" required /></div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-sm-1">Etablissement</div>
-                                <div class="col-sm-11"><input type="Etablissement" class="col-sm-6"
-                                        placeholder="Etablissement" id="etablisement" required /></div>
+                                <div class="col-sm-11"><input type="Etablissement" class="col-sm-6" placeholder="Etablissement" id="etablisement" required /></div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-sm-1">Promotion</div>
-                                <div class="col-sm-11"><input type="Promotion" class="col-sm-6" placeholder="Promotion"
-                                        id="promotion" required /></div>
+                                <div class="col-sm-11"><input type="Promotion" class="col-sm-6" placeholder="Promotion" id="promotion" required /></div>
                             </div>
                             <br>
                         </div>

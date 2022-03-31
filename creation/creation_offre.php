@@ -80,9 +80,13 @@ echo '<main>
                          <br></br>
                          <a href="../listes/l-eleve.php">Liste des élèves</a>
                          <br></br>
+                         <a href="../listes/l-delegue.php">Liste des délegués</a>
+                         <br></br>
                          <a href="../listes/l-entreprise.php">Liste des entreprises</a>
                          <br></br>
                          <a href="../listes/l-offre.php">Liste des offres de stage</a>
+                         <br></br>
+                         <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
                          <br></br>
                          <a href="../creation/creation_offre.php">Création d\'une offre</a>
                          <br></br>';
@@ -95,7 +99,6 @@ echo '<main>
                         <a href="../creation/creation_offre.php">Création d\'une offre</a>
                         <br></br>';
                         break;    
-
                 }
             }
                 echo'<div>
@@ -109,4 +112,4 @@ echo '<main>
     header("Location:../connexion/connexion.php");
     exit;
 }
-    ?>
+?>

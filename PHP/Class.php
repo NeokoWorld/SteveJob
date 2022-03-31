@@ -23,6 +23,14 @@ class LoginRepository {
         $stmt -> bindValue(2, $mdp, PDO::PARAM_STR);
         $stmt -> execute();
         return $stmt->fetchAll();
+
+    }
+
+    public function printInfo($identifiant, $mdp)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT nom, prenom, email, centre FROM user INNER JOIN authentification ON authentification.id_auth = user.id_user WHERE login=$identifiant AND mdp=$mdp;");
+        return $utilisateur->fetchAll();
     }
     
 }
@@ -82,14 +90,6 @@ class Offre {
         $this->connexion();
         $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `id_offre` = ? ;");
         $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); //id_pilote
-        return $stmt -> execute();
-    }
-
-    public function delEntreprise($id_entreprise)
-    {
-        $this->connexion();
-        $stmt = $this->_connexion->prepare("DELETE FROM `fiche_entreprise` WHERE `fiche_entreprise`.`id_fiche` = ? ;");
-        $stmt -> bindValue(1, $id_entreprise, PDO::PARAM_INT); //id_enteprise
         return $stmt -> execute();
     }
 
