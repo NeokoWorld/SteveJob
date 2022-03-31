@@ -62,9 +62,9 @@ echo '<main>
                 <br></br>
                 <a href="../listes/l-entreprise.php">Listes des entreprises</a>
                 <br></br>
-                <a href="../creation/creation_profil.php">Création d\'un profil</a>
-                <br></br>
                 <a href="../listes/l-offre.php">Listes des offres de stage</a>
+                <br></br>
+                <a href="../creation/creation_profil.php">Création d\'un profil</a>
                 <br></br>
                 <a href="../creation/creation_entreprise.php">Création d\'une entreprise</a>
                 <br></br>

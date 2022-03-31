@@ -85,6 +85,14 @@ class Offre {
         return $stmt -> execute();
     }
 
+    public function delEntreprise($id_entreprise)
+    {
+        $this->connexion();
+        $stmt = $this->_connexion->prepare("DELETE FROM `fiche_entreprise` WHERE `fiche_entreprise`.`id_fiche` = ? ;");
+        $stmt -> bindValue(1, $id_entreprise, PDO::PARAM_INT); //id_enteprise
+        return $stmt -> execute();
+    }
+
     public function UpOffre()
     {
         $this->connexion();

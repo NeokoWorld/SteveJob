@@ -1,10 +1,8 @@
 Create/Update/Delete eleve
 Create/Update/Delete pilote
-Update/Delete offre
+Update offre
 Update entreprise
 
-Barre de filtrage pour les offres de stages
-// pour les pilotes
-// pour les élèves
+Barre de filtrage info
 
 Faire la wish liste
