@@ -1,5 +1,4 @@
 <?php
-session_start();
 if(@$_SESSION['auth']==true){
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="creation.css">';

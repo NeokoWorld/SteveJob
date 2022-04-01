@@ -8,11 +8,11 @@ echo '<main>
         <fieldset>
             <legend>Mot de passe oublié</legend>
             <div class="container">
-                <div class="row"><label class="col-sm-6">Email</label>
-                    <input type="email" class="col-sm-6" placeholder="Entrez votre Email" id="Email" required />
+                <div class="row"><label class="col-6">Email</label>
+                    <input type="email" class="col-6" placeholder="Entrez votre Email" id="Email" required />
                 </div>
-                <div class="row"><label class="col-sm-6">Confirmation Email</label>
-                    <input type="email" class="col-sm-6" placeholder="Confirmez votre Email" id="confEmail"
+                <div class="row"><label class="col-6">Confirmation Email</label>
+                    <input type="email" class="col-6" placeholder="Confirmez votre Email" id="confEmail"
                         required />
                 </div>
             </div>

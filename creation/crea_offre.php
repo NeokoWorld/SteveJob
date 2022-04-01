@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include '../PHP/Class.php';
 $co = new Offre();
 $creater_offre=$co->addOffre($_POST['comp'], $_POST['loca'], $_POST['ent'], $_POST['dur'], $_POST['em'], $_POST['remu'], $_POST['ID_ent']);

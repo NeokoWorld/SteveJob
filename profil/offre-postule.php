@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="offre-postule.css">';
 include '../Base/header.php';
