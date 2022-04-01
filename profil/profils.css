@@ -1,7 +1,7 @@
 article {
     height: 631px;
     overflow: auto;
-    background-color: #6d5d5d;
+    background-color: rgb(82, 82, 82);
     border: 2px solid whitesmoke;
     border-radius: 20px;
 }
@@ -46,13 +46,25 @@ body {
 
 main {
     background-color: #c5a7a1;
+    height: 100%;
     color: white;
     padding: 0;
     padding-top: 60px;
 }
 
+@media screen and (max-width:470px) {
+
+    main {
+        background-color: #c5a7a1;
+        height: 100%;
+        color: white;
+        padding: 0;
+        padding-top: 0px;
+    }
+}
+
 footer {
-    background-color: #2b241f;
+    background-color: rgb(31, 31, 31);
     color: azure;
 }
 
@@ -60,14 +72,10 @@ footer {
     padding-top: 1px
 }
 
-footer a {
-    padding: 0 5px;
-    color: blanchedalmond;
-}
-
 img {
     width: 150px;
     border: 2px solid white;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 470px) {
@@ -97,22 +105,11 @@ a {
     padding: 4px;
 }
 
-.bdd {
-    padding: 10px;
-    background-color: #a78c86;
-    border: 2px solid whitesmoke;
-    border-radius: 20px;
-    margin: 5px;
+footer a {
+    padding: 0 5px;
+    color: blanchedalmond;
 }
 
-.joie {
-    text-decoration: none;
-    color: black;
-}
-
-.css {
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    align-items: center;
+.case {
+    height: 100%;
 }

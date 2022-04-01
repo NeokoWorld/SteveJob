@@ -2,7 +2,7 @@
 session_start();
 if(@$_SESSION['auth']==true){
 include '../Base/head.php';
-echo '<link rel="stylesheet" href="avion.css">';
+echo '<link rel="stylesheet" href="profils.css">';
 include '../Base/header.php';
 
 $id_User = $_GET['idPilote'];
@@ -11,8 +11,8 @@ $pilotes = new Pilote();
 $detail = $pilotes->getPilotebyID($id_User);
 
     echo'<main>
-        <div class="container">
-            <div class="row">
+        <div class="container case">
+            <div class="row case">
                 <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
                     role="button" aria-controls="offcanvasExample">
                     +

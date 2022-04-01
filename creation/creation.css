@@ -16,13 +16,14 @@ fieldset {
 html,
 body {
     padding: 0;
-    color: white;
+    color: #c5a7a1;
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
 }
 
 main {
     background-color: #c5a7a1;
+    color: white;
     height: 85%;
     padding: 0;
     padding-top: 60px;
@@ -33,7 +34,7 @@ main {
     html,
     body {
         padding: 0;
-        color: white;
+        color: #c5a7a1;
         height: 100%;
         font-family: 'Times New Roman', Times, serif;
         background-color: #c5a7a1;

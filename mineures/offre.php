@@ -12,7 +12,7 @@ $date = new DateTime($detail['date_offre']);
 echo '<main>
 <div class="container">
     <div class="row">
-        <article class="col-sm-6">
+        <article class="col-sm-6 hauteur">
                 <img src="../assets/images/entreprise.png" class="rounded mx-auto d-block" style="height:20%; margin-top:10px;"></img>
             <div class="row bdd" style="margin-top:25px;">
                 <div class="col-sm-3">Entreprise</div>

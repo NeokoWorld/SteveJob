@@ -1,13 +1,13 @@
 <?php
 include '../Base/head.php';
 echo '<link rel="stylesheet" href="info.css">';
-include '../Base/header.php';
-echo '<main>
+include '../Base/header.php';?>
+<main>
 <div class="container">
-    <div class="row">';
-        // <article class="col-1" style="text-align:center;">Filtrage</article>
-        echo'<article class="col-12">';
-        require '../PHP/Class.php';
+    <div class="row">
+        <!-- <article class="col-1" style="text-align:center;">Filtrage</article> -->
+        <article class="col-12">
+        <?php require '../PHP/Class.php';
         $users = new Offre();
         if (isset($_GET['page']) && !empty($_GET['page'])){
             $page=$_GET['page']-1;
@@ -45,13 +45,10 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
         </li>
     </ul>
 </nav>
-</section> 
-    </div>
-    </main>
 
-    <?php    echo '</article>
+    </article>
     </div>
-</div>
-</main>';
-include '../Base/footer.php';
+        </div>
+</main>
+<?php include '../Base/footer.php';
 ?>
