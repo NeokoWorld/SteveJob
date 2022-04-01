@@ -6,10 +6,6 @@ include '../Base/header.php';
     echo'<main>
         <div class="container">
             <div class="row">
-                <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                    role="button" aria-controls="offcanvasExample">
-                    +
-                </a>
                 <div class="text-center col-11">
                     <article class="prof"> Offres de stage créés par l\'entreprise
                     </article>
