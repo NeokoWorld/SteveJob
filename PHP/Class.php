@@ -26,12 +26,12 @@ class LoginRepository {
 
     }
 
-    public function printInfo($identifiant, $mdp)
-    {
-        $this->connexion();
-        $utilisateur = $this->_connexion->query("SELECT nom, prenom, email, centre FROM user INNER JOIN authentification ON authentification.id_auth = user.id_user WHERE login=$identifiant AND mdp=$mdp;");
-        return $utilisateur->fetchAll();
-    }
+    // public function printInfo($identifiant, $mdp)
+    // {
+    //     $this->connexion();
+    //     $utilisateur = $this->_connexion->query("SELECT nom, prenom, email, centre FROM user INNER JOIN authentification ON authentification.id_auth = user.id_user WHERE login=$identifiant AND mdp=$mdp;");
+    //     return $utilisateur->fetchAll();
+    // }
     
 }
 
@@ -54,6 +54,13 @@ class Offre {
     {
         $this->connexion();
         $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage LIMIT $offset,10");
+        return $utilisateur->fetchAll();
+    }
+
+    public function getOffrebyEntreprise($id, $offset=0)
+    {
+        $this->connexion();
+        $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage WHERE id_fiche = $id LIMIT $offset,10 ");
         return $utilisateur->fetchAll();
     }
 
@@ -320,11 +327,23 @@ class Pilote {
         return $nombre['nombre'];
     }
 
-    public function addPilote()
+    public function addPilote($identifiant, $mdp, $nom, $prenom, $email, $centre, $ID_Role, $id_auth, $promotion_assignees, $id_user)
     {
          $this->connexion();
-        $utilisateur = $this->_connexion->query("");
-        return $utilisateur->fetch();
+        $stmt = $this->_connexion->prepare("INSERT INTO authentification (login, mdp) VALUES (?, ?);
+        INSERT INTO user (nom, prenom, email, centre, ID_Role, id_auth) VALUES (?, ?, ?, ?, ?, ?);
+        INSERT INTO pilote (promotion_assignees, id_user) VALUES (?, ?);");
+        $stmt -> bindValue(1, $identifiant, PDO::PARAM_STR); //Identifiant
+        $stmt -> bindValue(2, $mdp, PDO::PARAM_STR); //MDP
+        $stmt -> bindValue(3, $nom, PDO::PARAM_STR); //Nom
+        $stmt -> bindValue(4, $prenom, PDO::PARAM_INT); //Prenom
+        $stmt -> bindValue(5, $email, PDO::PARAM_INT); //Email
+        $stmt -> bindValue(6, $centre, PDO::PARAM_INT); //Centre
+        $stmt -> bindValue(7, $ID_Role, PDO::PARAM_INT); //ID_Role
+        $stmt -> bindValue(8, $id_auth, PDO::PARAM_INT); //ID_auth
+        $stmt -> bindValue(9, $promotion_assignees, PDO::PARAM_STR); //Promotion_assignées
+        $stmt -> bindValue(10, $id_user, PDO::PARAM_INT); //ID_user
+        return $stmt -> execute();
     }
 
     public function getOffrebyComp($competence)

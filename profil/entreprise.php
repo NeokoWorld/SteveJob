@@ -13,10 +13,6 @@ $detail = $entreprises->getEntreprisebyID($id_Fiche);
     echo'<main>
         <div class="container">
             <div class="row">
-                <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                    role="button" aria-controls="offcanvasExample">
-                    +
-                </a>
                 <div class="text-center col-11">
                     <article class="prof">
                         <div style="width: 65%; margin:auto;">
@@ -55,6 +51,10 @@ $detail = $entreprises->getEntreprisebyID($id_Fiche);
                                 <div class="col-sm-3">Confiance du pilote</div>
                                 <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Confiance du pilote" disabled = "disabled" style="font-weight:bold;" id="confiance" value="'.$detail['confiance_pilote'].' / 5" required /></div>
                             </div>
+                            <br>
+                            <form method="post" action="../profil/offre-cree.php">
+                                <span><input type="submit" value="Offres de stage" name="afficher" /></span>
+                            </form>
                             <br>
                         </div>
                     </article>
