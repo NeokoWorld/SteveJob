@@ -8,5 +8,3 @@ Barre de filtrage info
 Faire la wish liste
 
 Afficher les offres crées par une entreprise
-
-SELECT * FROM offre_de_stage WHERE id_fiche = 5

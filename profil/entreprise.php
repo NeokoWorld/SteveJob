@@ -17,7 +17,6 @@ $detail = $entreprises->getEntreprisebyID($id_Fiche);
                     <article class="prof">
                         <div style="width: 65%; margin:auto;">
                             <img src="../assets/images/entreprise.png"></img>
-                            <br>
                             <div class="row" style="margin-top:50px;">
                                 <div class="col-sm-3">ID_entreprise</div>
                                 <div class="col-sm-8"><input type="id" class="col-sm-6" placeholder="id_fiche" disabled = "disabled" style="font-weight:bold;" id="id_fiche" value="'.$detail['id_fiche'].'" required /></div>
@@ -52,11 +51,9 @@ $detail = $entreprises->getEntreprisebyID($id_Fiche);
                                 <div class="col-sm-8"><input type="text" class="col-sm-6" placeholder="Confiance du pilote" disabled = "disabled" style="font-weight:bold;" id="confiance" value="'.$detail['confiance_pilote'].' / 5" required /></div>
                             </div>
                             <br>
-                            <form method="post" action="../profil/offre-cree.php">
-                                <span><input type="submit" value="Offres de stage" name="afficher" /></span>
-                            </form>
-                            <br>
                         </div>
+                    </article>
+                    <article class="prof2">Offre(s) de stage
                     </article>
                 </div>
             </div>
