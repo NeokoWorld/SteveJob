@@ -1,15 +1,15 @@
 <?php
 session_start();
-if(@$_SESSION['auth']==true){
-include '../Base/head.php';
-echo '<link rel="stylesheet" href="profils.css">';
-include '../Base/header.php';
+if (@$_SESSION['auth'] == true) {
+    include '../Base/head.php';
+    echo '<link rel="stylesheet" href="profils.css">';
+    include '../Base/header.php';
+?>
 
-    echo'<main>
+    <main>
         <div class="container case">
             <div class="row case">
-                <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                    role="button" aria-controls="offcanvasExample">
+                <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px;" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                     +
                 </a>
                 <div class="text-center col-11">
@@ -47,12 +47,10 @@ include '../Base/header.php';
                 </div>
             </div>
         </div>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel" style="width: 200px;">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 200px;">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="color :black;">Menu</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" style="color :black;">
                 <a href="pilote.php">Profil</a>
@@ -74,9 +72,11 @@ include '../Base/header.php';
                 </div>
             </div>
         </div>
-    </main>';
-include '../Base/footer.php';
-}else{
+    </main>
+
+<?php
+    include '../Base/footer.php';
+} else {
     header("Location:../connexion/connexion.php");
     exit;
 }

@@ -1,63 +1,63 @@
 <?php
 session_start();
-if(@$_SESSION['auth']==true){
-include '../Base/head.php';
-echo '<link rel="stylesheet" href="creation.css">';
-include '../Base/header.php';
+if (@$_SESSION['auth'] == true) {
+    include '../Base/head.php';
+    echo '<link rel="stylesheet" href="creation.css">';
+    include '../Base/header.php';
+?>
 
-echo '<main>
-<div class="container">
-    <div class="row">
-        <form action="./crea_offre.php" method="post" class="text-center">
-            <fieldset>
-                <legend>Création d\'une offre de stage</legend>
-                    <div class="row">
-                        
-                        <div class="col-6"><label for="comp">Competences</label></div>
-                        <div class="col-6"><input type="text" name="comp" placeholder="Saisissez les competences requises" required/></div>
-                    
-                        <div class="col-6"><label for="loca">Localité</label></div>
-                        <div class="col-6"><input type="text" name="loca" placeholder="Saisissez une localité" required/></div>
-                    
-                        <div class="col-6"><label for="ent">Entreprise</label></div>
-                        <div class="col-6"><input type="text" name="ent" placeholder="Saisissez l\'entreprise" required/></div>
-                    
-                        <div class="col-6"><label for="dur">Durée</label></div>
-                        <div class="col-6"><input type="text" name="dur" placeholder="Saisissez une durée" required/></div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <form action="./crea_offre.php" method="post" class="text-center">
+                    <fieldset>
+                        <legend>Création d\'une offre de stage</legend>
+                        <div class="row">
 
-                        <div class="col-6"><label for="em">Date d\'emission</label></div>
-                        <div class="col-6"><input type="date" name="em" placeholder="Saisissez la date d\'emission" required/></div>
-                    
-                        <div class="col-6"><label for="remu">Rémunération</label></div>
-                        <div class="col-6"><input type="text" name="remu" placeholder="Saisissez la Remuneration" required/></div>
+                            <div class="col-6"><label for="comp">Competences</label></div>
+                            <div class="col-6"><input type="text" name="comp" placeholder="Saisissez les competences requises" required /></div>
 
-                        <div class="col-6"><label for="ID_ent">ID de l\'Entreprise</label></div>
-                        <div class="col-6"><input type="number" name="ID_ent" placeholder="Saississez l\'ID de l\'entreprise" required/></div>
-                    
-                        <div class="col-3"></div><div class="col-3"><input type="submit" value="Envoyer" id="envoyer" /+></div>
-                        <div class="col-3"><input type="reset" value="Annuler" /></div><div class="col-3">
-                    </div>
-                </div>
-            </fieldset>
-        </form>
-    </div>
-</div>
-<a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px; outline:none; text-decoration:none" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                    role="button" aria-controls="offcanvasExample">
-                    +
-                </a>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel" style="width: 200px;">
+                            <div class="col-6"><label for="loca">Localité</label></div>
+                            <div class="col-6"><input type="text" name="loca" placeholder="Saisissez une localité" required /></div>
+
+                            <div class="col-6"><label for="ent">Entreprise</label></div>
+                            <div class="col-6"><input type="text" name="ent" placeholder="Saisissez l\'entreprise" required /></div>
+
+                            <div class="col-6"><label for="dur">Durée</label></div>
+                            <div class="col-6"><input type="text" name="dur" placeholder="Saisissez une durée" required /></div>
+
+                            <div class="col-6"><label for="em">Date d\'emission</label></div>
+                            <div class="col-6"><input type="date" name="em" placeholder="Saisissez la date d\'emission" required /></div>
+
+                            <div class="col-6"><label for="remu">Rémunération</label></div>
+                            <div class="col-6"><input type="text" name="remu" placeholder="Saisissez la Remuneration" required /></div>
+
+                            <div class="col-6"><label for="ID_ent">ID de l\'Entreprise</label></div>
+                            <div class="col-6"><input type="number" name="ID_ent" placeholder="Saississez l\'ID de l\'entreprise" required /></div>
+
+                            <div class="col-3"></div>
+                            <div class="col-3"><input type="submit" value="Envoyer" id="envoyer" /+></div>
+                            <div class="col-3"><input type="reset" value="Annuler" /></div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <a class="btn btn-secondary col-1 bout fixed-top" style="margin:56px 0; width: 53px; height:53px; outline:none; text-decoration:none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            +
+        </a>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 200px;">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="color :black;">Menu</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body" style="color :black;">';
-            if(@$_SESSION['auth']==true){
-                switch ($_SESSION['user']['ID_Role']){
-                    case 1 :
-                        echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br>
+            <div class="offcanvas-body" style="color :black;">
+                <?php if (@$_SESSION['auth'] == true) {
+                    switch ($_SESSION['user']['ID_Role']) {
+                        case 1:
+                            echo '<a class="navbar-brand pad" href="../profil/admin.php">Profil</a><br></br>
                         <a href="../listes/l-eleve.php">Liste des élèves</a>
                         <br></br>
                         <a href="../listes/l-pilote.php">Listes des pilotes</a>
@@ -74,9 +74,9 @@ echo '<main>
                         <br></br>
                         <a href="../creation/creation_offre.php">Création d\'une offre</a>
                         <br></br>';
-                        break;
-                    case 2 :
-                         echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a>
+                            break;
+                        case 2:
+                            echo '<a class="navbar-brand pad" href="../profil/pilote.php">Profil</a>
                          <br></br>
                          <a href="../listes/l-eleve.php">Liste des élèves</a>
                          <br></br>
@@ -90,25 +90,27 @@ echo '<main>
                          <br></br>
                          <a href="../creation/creation_offre.php">Création d\'une offre</a>
                          <br></br>';
-                         break;
-                    case 3 :
-                        echo '<a class="navbar-brand pad" href="../profil/delegue.php">Profil</a>
+                            break;
+                        case 3:
+                            echo '<a class="navbar-brand pad" href="../profil/delegue.php">Profil</a>
                         <br></br>
                         <a href="../listes/l-offre.php">Liste des offres</a>
                         <br></br>
                         <a href="../creation/creation_offre.php">Création d\'une offre</a>
                         <br></br>';
-                        break;    
-                }
-            }
-                echo'<div>
+                            break;
+                    }
+                } ?>
+                <div>
                     <a class="deco" href="../deco/deconnexion.php">Deconnexion</a>
                 </div>
             </div>
         </div>
-</main>';
+    </main>
+
+<?php
     include '../Base/footer.php';
-}else{
+} else {
     header("Location:../connexion/connexion.php");
     exit;
 }

@@ -64,18 +64,18 @@ class Offre {
         return $utilisateur->fetchAll();
     }
 
-    public function compterOffre(){
-        $this->connexion();
-        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM offre_de_stage');
-        $nombre =$utilisateur->fetch();
-        return $nombre['nombre'];
-    }
-
     public function getOffrebyID($id)
     {
         $this->connexion();
         $utilisateur = $this->_connexion->query("SELECT * FROM offre_de_stage WHERE id_Offre = $id");
         return $utilisateur->fetch();
+    }
+
+    public function compterOffre(){
+        $this->connexion();
+        $utilisateur = $this->_connexion->query('SELECT COUNT(*) AS nombre FROM offre_de_stage');
+        $nombre =$utilisateur->fetch();
+        return $nombre['nombre'];
     }
 
     public function addOffre($competence, $localite, $entreprise, $duree, $remuneration, $date_offre, $id_fiche)
@@ -96,7 +96,7 @@ class Offre {
     {
         $this->connexion();
         $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `id_offre` = ? ;");
-        $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); //id_pilote
+        $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); 
         return $stmt -> execute();
     }
 
@@ -330,9 +330,7 @@ class Pilote {
     public function addPilote($identifiant, $mdp, $nom, $prenom, $email, $centre, $ID_Role, $id_auth, $promotion_assignees, $id_user)
     {
          $this->connexion();
-        $stmt = $this->_connexion->prepare("INSERT INTO authentification (login, mdp) VALUES (?, ?);
-        INSERT INTO user (nom, prenom, email, centre, ID_Role, id_auth) VALUES (?, ?, ?, ?, ?, ?);
-        INSERT INTO pilote (promotion_assignees, id_user) VALUES (?, ?);");
+        $stmt = $this->_connexion->prepare("INSERT INTO authentification (login, mdp) VALUES (?, ?) INSERT INTO user (nom, prenom, email, centre, ID_Role, id_auth) VALUES (?, ?, ?, ?, ?, ?) INSERT INTO pilote (promotion_assignees, id_user) VALUES (?, ?);");
         $stmt -> bindValue(1, $identifiant, PDO::PARAM_STR); //Identifiant
         $stmt -> bindValue(2, $mdp, PDO::PARAM_STR); //MDP
         $stmt -> bindValue(3, $nom, PDO::PARAM_STR); //Nom
