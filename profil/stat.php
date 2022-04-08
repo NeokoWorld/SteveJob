@@ -1,6 +1,6 @@
 <?php
 include '../Base/head.php';
-echo '<link rel="stylesheet" href="stat.css">';
+echo '<link rel="stylesheet" href="offres.css">';
 include '../Base/header.php';
 ?>
 
