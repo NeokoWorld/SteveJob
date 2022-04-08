@@ -13,16 +13,21 @@ UPDATE fiche_entreprise SET Nom = '?', Secteur_activite = '?', Localite = '?', N
 -- Create :
 
 -- Delete : 
+DELETE FROM eleve WHERE id_eleve = ? DELETE FROM user WHERE id_user = ? DELETE FROM authentification WHERE id_auth = ?
 
 -- Update : 
+UPDATE eleve SET nom = '?', prenom = '?', email = '?', centre = '?' WHERE id_user = $id
 
 #################### Pilote ######################
 
--- Create :
+-- Create : 
+INSERT INTO authentification (login, mdp) VALUES (?, ?) INSERT INTO user (nom, prenom, email, centre, ID_Role, id_auth) VALUES (?, ?, ?, ?, ?, ?) INSERT INTO pilote (promotion_assignees, id_user) VALUES (?, ?);
 
 -- Delete : 
+DELETE FROM pilote WHERE id_user = ? DELETE FROM user WHERE id_user = ? DELETE FROM authentification WHERE id_auth = ?
 
 -- Update : 
+UPDATE pilote SET nom = '?', prenom = '?', email = '?', centre = '?' WHERE id_user = $id
 
 #################### Barre de filtrage ######################
 
