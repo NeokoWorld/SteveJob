@@ -29,6 +29,7 @@ if (@$_SESSION['auth'] == true) {
                         }
                         $users->getOffre();
 
+<<<<<<< Updated upstream
                         $toutesLignes = (int)$users->compterOffre();
                         $totoalPages = ceil($toutesLignes / 10);
                         if (isset($_GET['page']) && !empty($_GET['page'])) {
@@ -70,6 +71,40 @@ if (@$_SESSION['auth'] == true) {
                     </article>
                     <form method="get" action="../delete/delete_offre.php">
                         <span><input type="id" name="id_offre" placeholder="Saisissez l\'id" required /></span>
+=======
+                    $toutesLignes=(int)$users->compterOffre();     
+                    $totoalPages = ceil($toutesLignes/10);
+                    if(isset($_GET['page']) && !empty($_GET['page'])){
+                        $currentPage = (int) strip_tags($_GET['page'])-1;
+                    }else{
+                        $currentPage = 0;
+                    }
+                    ?>
+                    <form method="get" action="../delete/delete_offre.php">
+                    <div class="col-6"><input type="id" name="id_offre" placeholder="Saisissez l'id" required/></div>
+                    <div class="col-3">
+                    </div><div class="col-3"><input type="submit" value="supprimer" name="supprimer" /></div>
+                    </form>
+                    
+                    <nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item <?php if($page<=0){echo 'disabled';} ?>">
+            <a class="page-link" href="<?php if($page<0){echo '#';} else{echo "?page=".($currentPage-1);}?>">Precedent</a>
+        </li>
+        <?php for($i=1;$i <=$totoalPages; $i++): ?>
+        <li class="page-item <?php if(($page+1)==$i){echo 'active';} ?>">
+            <a class="page-link" href="?page=<?=$i;?>"><?=$i;?></a>
+        </li>
+        <?php endfor; ?>
+        <li class="page-item <?php if(($page+1)>=$totoalPages){echo 'disabled';} ?>">
+            <a class="page-link" href="<?php if($page>=$totoalPages){echo '#';} else{echo "?page=".($currentPage+2);}?>">Suivant</a>
+        </li>
+    </ul>
+</nav>
+                    <?php echo '</article>
+                    <form method="get" action="../delete/delete.php">
+                    <span><input type="id" name="id_fiche" placeholder="Saisissez l\'id" required/></span>
+>>>>>>> Stashed changes
                         <span><input type="submit" value="Supprimer" name="supprimer" /></span>
                     </form>
                 </div>
