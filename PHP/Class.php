@@ -96,8 +96,13 @@ class Offre {
     {
         $this->connexion();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `id_offre` = ? ;");
         $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); 
+=======
+        $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `offre_de_stage`.`id_offre` = ? ;");
+        $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); //id_pilote
+>>>>>>> Stashed changes
 =======
         $stmt = $this->_connexion->prepare("DELETE FROM `offre_de_stage` WHERE `offre_de_stage`.`id_offre` = ? ;");
         $stmt -> bindValue(1, $id_offre, PDO::PARAM_INT); //id_pilote
